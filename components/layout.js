@@ -5,7 +5,7 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
 const name = 'This website is a WIP';
-export const siteTitle = 'Check back later for updated progress...';
+export const siteTitle = '<Insert Title Here>';
 
 export default function Layout({ children, home }) {
   return (
