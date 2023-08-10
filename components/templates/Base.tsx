@@ -1,5 +1,5 @@
 import React from 'react';
-import { Element } from "react-scroll";
+import Link from 'next/link'
 
 import { Meta } from '../layout/Meta';
 import { AppConfig } from '../utils/AppConfig';
@@ -11,18 +11,41 @@ import { VerticalFeatures } from './VerticalFeatures';
 const Base = () => (
   <div className="text-gray-600 antialiased">
     <Meta title={AppConfig.title} description={AppConfig.description} />
-    <Element name="hero">
-      <Hero />
-    </Element>
-    <Element name="verticalfeatures">
-      <VerticalFeatures />
-    </Element>
-    <Element name="banner">
-      <Banner />
-    </Element>
-    <Element name="footer">
-      <Footer />
-    </Element>
+    <div>
+      <nav>
+        <ul>
+          <li>
+            <Link href="#hero" scroll={false}>
+            </Link>
+          </li>
+          <li>
+            <Link href="#features" scroll={false}>
+            </Link>
+          </li>
+          <li>
+            <Link href="#banner" scroll={false}>
+            </Link>
+          </li>
+          <li>
+            <Link href="#footer" scroll={false}>
+            </Link>
+          </li>
+        </ul>
+      </nav>
+
+      <div id="hero">
+        <Hero />
+      </div>
+      <div id="features">
+        <VerticalFeatures />
+      </div>
+      <div id="banner">
+        <Banner />
+      </div>
+      <div id="footer">
+        <Footer />
+      </div>
+    </div>
   </div>
 );
 

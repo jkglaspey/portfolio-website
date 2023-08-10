@@ -6,27 +6,13 @@ import { Button } from '../button/Button';
 import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
 import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
-import { scroller } from 'react-scroll';
-import { Logo } from './Logo';
 
 const Hero = () => {
-  const scrollToNextComponent = () => {
-    scroller.scrollTo('verticalfeatures', {
-      duration: 1000,
-      smooth: true,
-    });
-  };
-
   return (
-      <Background color="min-h-screen bg-gradient-to-b from-amber-700 to-gray-900">
+    <div>
+      <Background color="h-screen bg-gradient-to-b from-amber-700 to-gray-900">
         <Section yPadding="py-6">
-        <button onClick={scrollToNextComponent}>Scroll Down</button>
           <NavbarTwoColumns logo="">
-            <li>
-              <Link href="https://github.com/jkglaspey/portfolio-website">
-                Check out this project on Github!
-              </Link>
-            </li>
           </NavbarTwoColumns>
         </Section>
 
@@ -47,6 +33,7 @@ const Hero = () => {
           />
         </Section>
       </Background>
+    </div>
   )
 };
 
