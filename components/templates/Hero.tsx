@@ -10,7 +10,7 @@ import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
 const Hero = () => {
   return (
     <div>
-      <Background color="h-screen bg-gradient-to-b from-amber-700 to-gray-900">
+      <Background color="h-screen bg-gradient-to-b from-amber-800 to-gray-900">
         <Section yPadding="py-6">
           <NavbarTwoColumns logo="">
           </NavbarTwoColumns>
@@ -18,13 +18,6 @@ const Hero = () => {
 
         <Section yPadding="pt-20 pb-32">
           <HeroOneButton
-            title={
-              <>
-                {'\n'}
-                <span className="text-primary-500">React developers</span>
-              </>
-            }
-            description="The easiest way to build a React landing page in seconds."
             button={
               <Link href="https://creativedesignsguru.com/category/nextjs/">
                 <Button xl>Download Your Free Theme</Button>

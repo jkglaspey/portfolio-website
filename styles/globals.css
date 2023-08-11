@@ -49,3 +49,19 @@ button {
   padding: 0.5rem 1rem;
   font-weight: bold;
 }
+
+.smaller-image {
+  max-width: 80%; /* Adjust this value as needed */
+  height: auto;
+}
+
+.center-grid {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.center-grid-container {
+  display: flex;
+  justify-content: center;
+}
