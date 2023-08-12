@@ -4,8 +4,11 @@ import Image from 'next/image';
 import { Background } from '../background/Background';
 import { VerticalFeatureRow } from '../feature/VerticalFeatureRow';
 import { VerticalFeatureInformation } from '../feature/VerticalFeatureInformation';
+import { VerticalFeatureImage } from '../feature/VerticalFeatureImage';
+import HorizontalLinkList from '../feature/HorizontalLinkList';
 import { Section } from '../layout/Section';
 import Break from '../layout/Break';
+import { ButtonLink } from '../layout/ButtonLink';
 
 const VerticalFeatures = () => {
   
@@ -43,13 +46,32 @@ const VerticalFeatures = () => {
           right
         />
         {/* Add a "learn more about me" here */}
-
+        <ButtonLink
+          title="Interested? Learn more about me."
+          button={
+            <button className="bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 border-b-4 border-amber-800 hover:border-amber-700 rounded active:bg-amber-600 active:shadow-[0_8px_9px_-4px_rgba(180,83,9,0.4),0_4px_18px_0_rgba(180,83,9,0.3)]">
+              Click here.
+            </button>
+          }
+        />
+        <Break type="oneThird" />
+        <hr className="my-12 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
+        <Break type="oneEighth" />
 
 
         {/* Skills, Experience, Resume */}
-
-
-
+        <HorizontalLinkList
+          title="Here is a list of my personal skills."
+          links={[
+            { title: 'About' },
+            { title: 'Premium' },
+            { title: 'Campaigns' },
+            { title: 'Blog' },
+            { title: 'Affiliate Program' },
+            { title: 'FAQs' },
+            { title: 'Contact' },
+          ]}
+        />
         {/* Projects */}
 
         <VerticalFeatureRow
