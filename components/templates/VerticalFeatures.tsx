@@ -11,6 +11,8 @@ const VerticalFeatures = () => {
   
   return (
     <Background color="bg-gray-900">
+
+      {/* Heading */}
       <Section
         title="Hello! 👋"
         description="My name is Joshua Glaspey. I am a developer, a student, but most of all, a learner."
@@ -18,15 +20,38 @@ const VerticalFeatures = () => {
         <Break type="oneEighth" />
         <hr className="my-12 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
         <Break type="oneEighth" />
+
+        {/* Introductory Section */}
         <VerticalFeatureInformation
-          title1="I am a rising senior"
-          title2="Burnett's Honors College at University of Central Florida"
-          description="I am currently pursuring a Bachelor's degree in Computer Engineering. It all started with a passion of understanding the fundamentals of how computers operate in high school. Since then, I have worked with UI design, full stack web development, and video game creation. I am moving towards studying Artificial Intelligence, and the benefits it can bring to workflows."
+          title1="I am a rising senior."
+          title2="Burnett's Honors College at University of Central Florida."
+          description="I am currently pursuring a Bachelor's degree in Computer Engineering, with a minor in Mathematics. It all started with a passion of understanding the fundamentals of how computers operate in high school. Since then, I have worked with UI design, full stack web development, and video game creation. I am moving towards studying Artificial Intelligence, and the benefits it can bring to workflows."
           image1="/images/University_of_Central_Florida_seal.png"
           imageAlt1="UCF Emblem"
           image2="/images/Burnett_Honors_College_UCF.png"
           imageAlt2="Burnett's Honors College Emblem"
         />
+        <Break type="oneEighth" />
+        <VerticalFeatureInformation
+          title1="I am researching Artificial Intelligence."
+          title2="Currently working towards completing a Master's Degree in Machine Learning."
+          description="I am continuing my journey at the University of Central Florida towards understanding complex Artificial Intelligence. I am beginning my pathway towards a Master's degree in Intelligent Systems and Machine Learning, while expanding on my undergraduate knowledge in both Computer Engineering and Mathematics. I intend to dive into research projects, which will be included in this website."
+          image1="/images/UCF-Machine-Learning-Badge.png"
+          imageAlt1="UCF Machine Learning Badge"
+          image2="/images/machine-learning-brain-icon.png"
+          imageAlt2="Icon of brain design with wires and CPU chips"
+          right
+        />
+        {/* Add a "learn more about me" here */}
+
+
+
+        {/* Skills, Experience, Resume */}
+
+
+
+        {/* Projects */}
+
         <VerticalFeatureRow
           title="Your title here"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."

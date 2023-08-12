@@ -23,10 +23,6 @@ const Base = () => (
             </Link>
           </li>
           <li>
-            <Link href="#banner" scroll={false}>
-            </Link>
-          </li>
-          <li>
             <Link href="#footer" scroll={false}>
             </Link>
           </li>
@@ -38,9 +34,6 @@ const Base = () => (
       </div>
       <div id="features">
         <VerticalFeatures />
-      </div>
-      <div id="banner">
-        <Banner />
       </div>
       <div id="footer">
         <Footer />

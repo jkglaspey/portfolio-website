@@ -10,12 +10,19 @@ import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
 const Hero = () => {
   return (
     <div>
+
+      {/* Background gradient */}
       <Background color="h-screen bg-gradient-to-b from-amber-800 to-gray-900">
+
+
         <Section yPadding="py-6">
           <NavbarTwoColumns logo="">
           </NavbarTwoColumns>
         </Section>
 
+        {/* Top Links (if included) (game links, resume, table of contents) */}
+
+        {/* Center Icon Button */}
         <Section yPadding="pt-20 pb-32">
           <HeroOneButton
             button={
