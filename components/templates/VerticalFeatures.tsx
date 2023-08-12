@@ -60,18 +60,62 @@ const VerticalFeatures = () => {
 
 
         {/* Skills, Experience, Resume */}
+        {/* Make the items clickable to show a picture + description */}
+        <h3 className="text-3xl font-semibold text-white text-center">
+          Here are my <strong>skills.</strong>
+        </h3>
         <HorizontalLinkList
-          title="Here is a list of my personal skills."
+          title="Frontend Development and Design."
           links={[
-            { title: 'About' },
-            { title: 'Premium' },
-            { title: 'Campaigns' },
-            { title: 'Blog' },
-            { title: 'Affiliate Program' },
-            { title: 'FAQs' },
-            { title: 'Contact' },
+            { title: 'JavaScript' },
+            { title: 'TypeScript' },
+            { title: 'HTML & CSS' },
+            { title: 'Next.js' },
+            { title: 'React' },
+            { title: 'Tailwind CSS' },
+            { title: 'Headless UI' },
+            { title: 'Material UI'}
           ]}
         />
+        <Break type="oneEighth" />
+        <HorizontalLinkList
+          title="Programming Languages."
+          links={[
+            { title: 'Java' },
+            { title: 'JavaScript' },
+            { title: 'C' },
+            { title: 'C#' },
+            { title: 'Verilog' },
+            { title: 'MIPS64' },
+          ]}
+        />
+        <Break type="oneEighth" />
+        <HorizontalLinkList
+          title="Computer Engineering Discipline."
+          links={[
+            { title: 'Java' },
+            { title: 'JavaScript' },
+            { title: 'C' },
+            { title: 'C#' },
+            { title: 'Verilog' },
+            { title: 'MIPS64' },
+            { title: 'TI MSP430' },
+          ]}
+        />
+        <Break type="oneEighth" />
+
+        <HorizontalLinkList
+          title="Other Skills."
+          links={[
+            { title: 'Java' },
+            { title: 'JavaScript' },
+            { title: 'C' },
+            { title: 'C#' },
+            { title: 'Verilog' },
+            { title: 'MIPS64' },
+          ]}
+        />
+        <Break type="oneEighth" />
         {/* Projects */}
 
         <VerticalFeatureRow
