@@ -1,5 +1,5 @@
 import React from 'react';
-import className from 'classnames';
+import classNames from 'classnames';
 import { useRouter } from 'next/router';
 
 type IHorizontalLinkListProps = {
@@ -10,7 +10,18 @@ type IHorizontalLinkListProps = {
 const HorizontalLinkList = (props: IHorizontalLinkListProps) => {
   const { title, links } = props;
 
-  const verticalFeatureClass = className(
+  const colorCombinations = [
+    ['bg-amber-700', 'hover:bg-amber-800'],
+    ['bg-amber-600', 'hover:bg-amber-700'],
+    ['bg-amber-800', 'hover:bg-amber-900'],
+  ];
+
+  const getRandomColorCombination = () => {
+    const randomIndex = Math.floor(Math.random() * colorCombinations.length);
+    return colorCombinations[randomIndex];
+  };
+
+  const verticalFeatureClass = classNames(
     'mt-20',
     'flex',
     'flex-wrap',
@@ -24,18 +35,43 @@ const HorizontalLinkList = (props: IHorizontalLinkListProps) => {
       <div className={'w-full'}>
         <h3 className="text-2xl font-semibold text-white text-center">{title}</h3>
         <ul className="mb-5 flex list-none flex-wrap pl-0 md:flex-row justify-center">
-          {links.map((link, index) => (
-            <li key={index} className="text-center">
-              <div 
-                data-te-chip-init
-                data-te-ripple-init
-                className="[word-wrap: break-word] my-[5px] mr-4 cursor-pointer items-center justify-between rounded bg-amber-700 hover:bg-amber-800 px-[12px] text-xl font-semibold leading-loose text-white text-3xl transition-[opacity] duration-300 ease-linear hover:!shadow-none"
-                data-te-close="true"
-              >
-                {link.title}
-              </div>
-            </li>
-          ))}
+          {links.map((link, index) => {
+            const [bgClass, hoverClass] = getRandomColorCombination();
+            const itemClass = classNames(
+              'text-center',
+              'my-[5px]',
+              'mr-4',
+              'cursor-pointer',
+              'items-center',
+              'justify-between',
+              'rounded',
+              bgClass,
+              hoverClass,
+              'px-[12px]',
+              'text-xl',
+              'font-semibold',
+              'leading-loose',
+              'text-white',
+              'text-3xl',
+              'transition-[opacity]',
+              'duration-300',
+              'ease-linear',
+              'hover:!shadow-none'
+            );
+
+            return (
+              <li key={index} className="text-center">
+                <div
+                  data-te-chip-init
+                  data-te-ripple-init
+                  className={itemClass}
+                  data-te-close="true"
+                >
+                  {link.title}
+                </div>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>

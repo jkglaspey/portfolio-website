@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface BreakProps {
-  type: 'half' | 'oneThird' | 'oneEighth' | 'image';
+  type: 'half' | 'oneFourth' | 'oneEighth' | 'image';
   imageSrc?: string; // New prop for image URL
 }
 
@@ -12,8 +12,8 @@ const Break: React.FC<BreakProps> = ({ type, imageSrc }) => {
     case 'half':
       classNames = 'h-[50vh]';
       break;
-    case 'oneThird':
-      classNames = 'h-[33.33vh]';
+    case 'oneFourth':
+      classNames = 'h-[25vh]';
       break;
     case 'oneEighth':
       classNames = 'h-[5vh]';
