@@ -28,7 +28,6 @@ const Base = () => (
           </li>
         </ul>
       </nav>
-
       <div id="hero">
         <Hero />
       </div>
