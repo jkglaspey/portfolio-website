@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-const HeroOneButton = ({ onToggleMode }) => {
-  const [randomImage, setRandomImage] = useState<string>("");
-
+const HeroOneButton = ({ onToggleMode, onShowChatBubble }) => {
+  const [randomImage, setRandomImage] = useState("");
+  
   const imageUrls = [
     "images/self-pictures/icon-1.png",
     "images/self-pictures/icon-2.png",
@@ -14,10 +14,15 @@ const HeroOneButton = ({ onToggleMode }) => {
     setRandomImage(imageUrls[randomIndex]);
   }, []);
 
+  const handleClick = () => {
+    onToggleMode();
+    onShowChatBubble();
+  };
+
   return (
     <header className="text-center">
-      <button className="cursor-pointer" onClick={onToggleMode}>
-        <div className="w-1/3 mx-auto">
+      <button className="cursor-pointer" onClick={handleClick}>
+        <div className="mx-auto">
           <img
             src={randomImage}
             alt="Random Icon"
