@@ -16,7 +16,7 @@ const PDFViewer = ({ pdfUrl }) => {
   return (
     <div className="w-full h-screen flex items-center justify-center">
       {error ? (
-        <div className={`${isDarkMode ? "text-white" : "text-black"}`}>{error}</div>
+        <div className={`${isDarkMode ? 'text-white' : 'text-black'}`}>{error}</div>
       ) : (
         <Document file={pdfUrl} onError={handlePdfError}>
           <Page pageNumber={1} />

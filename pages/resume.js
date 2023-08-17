@@ -22,7 +22,7 @@ export default function About() {
           title="Check out my resume."
           description=""
         >
-          <PDFViewer pdfUrl="/pdfs/resume.pdf" />
+          <PDFViewer pdfUrl="/resume.pdf" />
 
           <ButtonLink
             title=""
