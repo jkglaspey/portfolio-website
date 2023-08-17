@@ -10,6 +10,7 @@ type IVerticalFeatureRowProps = {
   images: string[];
   imageAlts: string[];
   reverse?: boolean;
+  isDarkMode?: boolean;
 };
 
 const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
@@ -29,8 +30,8 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
   return (
     <div className={verticalFeatureClass}>
       <div className="w-full text-center sm:w-1/2 sm:px-6">
-        <h3 className="text-3xl font-semibold text-white">{props.title}</h3>
-        <div className="mt-6 text-xl leading-9">{props.description}</div>
+        <h3 className={`text-3xl font-semibold ${ props.isDarkMode ? "text-white" : "text-gray-900"}`}>{props.title}</h3>
+        <div className={`mt-6 text-xl leading-9 ${ props.isDarkMode ? "text-white" : "text-gray-900"}`}>{props.description}</div>
         <ButtonLink
               title=""
               button={

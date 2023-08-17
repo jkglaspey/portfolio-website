@@ -3,12 +3,15 @@ import { CenteredFooter } from '../footer/CenteredFooter';
 import { Section } from '../layout/Section';
 import { FooterIconList } from '../footer/FooterIconList';
 
-const Footer = () => (
+const Footer = ({ isDarkMode }) => (
   <Section>
-    <hr className="my-12 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
+    <hr className={`my-12 h-0.5 border-t-0 ${isDarkMode ? "bg-white" : "bg-gray-900"} opacity-100 dark:opacity-50`} />
     <CenteredFooter
+      isDarkMode={isDarkMode}
       iconList={(
-        <FooterIconList titles={['LinkedIn', 'GitHub', 'HackerRank']}>
+        <FooterIconList 
+          isDarkMode={isDarkMode}
+          titles={['LinkedIn', 'GitHub', 'HackerRank']}>
           <Link href="http://www.linkedin.com/in/joshua-glaspey">
             <img src="/images/footer/linkedin-logo.png" alt="LinkedIn" />
           </Link>
@@ -21,7 +24,9 @@ const Footer = () => (
         </FooterIconList>
       )}
     >
-      Connect with me on LinkedIn!
+      <div className={`${isDarkMode ? "text-white" : "text-gray-900"}`}>
+        Connect with me on LinkedIn!
+      </div>
     </CenteredFooter>
   </Section>
 );

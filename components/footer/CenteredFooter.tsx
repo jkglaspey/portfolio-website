@@ -6,12 +6,13 @@ import { SendEmail } from '../templates/SendEmail';
 type ICenteredFooterProps = {
   iconList: ReactNode;
   children: ReactNode;
+  isDarkMode?: boolean;
 };
 
 const CenteredFooter = (props: ICenteredFooterProps) => (
   <div className="text-center justify-center">
     <nav>
-      <ul className="navbar mt-5 flex flex-row justify-center text-2xl font-semibold text-white">
+      <ul className={`navbar mt-5 flex flex-row justify-center text-2xl font-semibold ${props.isDarkMode ? "text-white" : "text-gray-900"}`}>
         {props.children}
       </ul>
     </nav>
@@ -25,7 +26,9 @@ const CenteredFooter = (props: ICenteredFooterProps) => (
     <Break type="oneFourth" />
 
     <div className="mt-8 text-sm">
-      <FooterCopyright />
+      <FooterCopyright 
+        isDarkMode={props.isDarkMode}
+      />
     </div>
 
     <style jsx>

@@ -17,6 +17,7 @@
     "next-seo": "^6.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-pdf": "^7.3.3",
     "react-scroll": "^1.8.9",
     "react-tsparticles": "^2.12.2",
     "remark": "^14.0.3",

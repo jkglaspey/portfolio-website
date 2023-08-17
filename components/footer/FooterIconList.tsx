@@ -4,16 +4,17 @@ import React from 'react';
 type IFooterIconListProps = {
   children: ReactNode;
   titles: string[];
+  isDarkMode?: boolean;
 };
 
 const FooterIconList = (props: IFooterIconListProps) => (
   <div className="footer-icon-list grid grid-flow-col gap-10 justify-center">
     {React.Children.map(props.children, (child, index) => (
       <div className="text-center flex flex-col items-center">
-        <div className="mb-2 text-xl font-semibold text-white">
+        <div className={`mb-2 text-xl font-semibold ${props.isDarkMode ? "text-white" : "text-gray-900"}`}>
           {props.titles[index]}
         </div>
-        <div className="w-24 h-24 hover:scale-110 transform origin-center transition-transform">
+        <div className="w-24 h-24 hover:scale-110 active:scale-105 transform origin-center transition-transform">
           {child}
         </div>
       </div>

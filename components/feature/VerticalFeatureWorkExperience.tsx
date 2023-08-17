@@ -13,6 +13,7 @@ type IVerticalFeatureWorkExperienceProps = {
   image: string;
   imageAlt: string;
   hideResponsibilitiesHeader?: boolean;
+  isDarkMode?: boolean;
 };
 
 const VerticalFeatureWorkExperience = (props: IVerticalFeatureWorkExperienceProps) => {
@@ -30,10 +31,10 @@ const VerticalFeatureWorkExperience = (props: IVerticalFeatureWorkExperienceProp
       <div className="grid grid-cols-6 w-full">
         <div className="col-span-4 text-left">
           <div className="flex flex-col">
-            <h3 className="text-2xl font-semibold text-white">{props.title}</h3>
-            <div className="pl-3 text-2xl text-white">{props.company}.</div>
-            <div className="pl-6 text-xl text-white">{props.date}</div>
-            <div className="pl-9 text-xl text-white">
+            <h3 className={`text-2xl font-semibold ${ props.isDarkMode ? "text-white" : "text-gray-900"}`}>{props.title}</h3>
+            <div className={`pl-3 text-2xl ${ props.isDarkMode ? "text-white" : "text-gray-900"}`}>{props.company}.</div>
+            <div className={`pl-6 text-xl ${ props.isDarkMode ? "text-white" : "text-gray-900"}`}>{props.date}</div>
+            <div className={`pl-9 text-xl ${ props.isDarkMode ? "text-white" : "text-gray-900"}`}>
               {props.location}
               <div>
                 <a href={props.link} target="_blank" rel="noopener noreferrer" className="pl-3 text-blue-500 hover:underline">
@@ -68,7 +69,7 @@ const VerticalFeatureWorkExperience = (props: IVerticalFeatureWorkExperienceProp
           {props.responsibilities.map((resp, index) => (
             <li
               key={index}
-              className="py-1 hover:bg-gray-800 dark:hover:bg-gray-800"
+              className={`py-1 hover:bg-gray-800 ${ props.isDarkMode ? "hover:bg-gray-800" : "hover:bg-gray-100"}`}
             >
               {resp}
             </li>

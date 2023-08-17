@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 type IHorizontalLinkListProps = {
   title: string;
   links: { title: string }[];
+  isDarkMode?: boolean;
 };
 
 const HorizontalLinkList = (props: IHorizontalLinkListProps) => {
@@ -33,7 +34,7 @@ const HorizontalLinkList = (props: IHorizontalLinkListProps) => {
   return (
     <div className={verticalFeatureClass}>
       <div className={'w-full'}>
-        <h3 className="text-2xl font-semibold text-white text-center">{title}</h3>
+        <h3 className={`text-2xl font-semibold ${props.isDarkMode ? "text-white" : "text-gray-900"} text-center`}>{title}</h3>
         <ul className="mb-5 flex list-none flex-wrap pl-0 md:flex-row justify-center">
           {links.map((link, index) => {
             const [bgClass, hoverClass] = getRandomColorCombination();

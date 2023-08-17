@@ -9,6 +9,7 @@ type IVerticalFeatureInformationProps = {
   image: string;
   imageAlt: string;
   right?: boolean;
+  isDarkMode?: boolean;
 };
 
 const VerticalFeatureInformation = (props: IVerticalFeatureInformationProps) => {
@@ -37,16 +38,16 @@ const VerticalFeatureInformation = (props: IVerticalFeatureInformationProps) => 
               />
             </div>
             <div className={`w-2/3 text-right pr-8`}>
-              <h3 className="text-3xl font-semibold text-white">{props.title1}</h3>
-              <div className="text-2xl text-white mt-2">{props.title2}</div>
+              <h3 className={`text-3xl font-semibold ${props.isDarkMode ? "text-white" : "text-gray-900"}`}>{props.title1}</h3>
+              <div className={`text-2xl ${props.isDarkMode ? "text-white" : "text-gray-900"} mt-2`}>{props.title2}</div>
               <div className="mt-6 text-xl leading-9">{props.description}</div>
             </div>
           </>
         ) : (
           <>
             <div className={`w-2/3 text-left pl-8`}>
-              <h3 className="text-3xl font-semibold text-white">{props.title1}</h3>
-              <div className="text-2xl text-white mt-2">{props.title2}</div>
+              <h3 className={`text-3xl font-semibold ${props.isDarkMode ? "text-white" : "text-gray-900"}`}>{props.title1}</h3>
+              <div className={`text-2xl ${props.isDarkMode ? "text-white" : "text-gray-900"} mt-2`}>{props.title2}</div>
               <div className="mt-6 text-xl leading-9">{props.description}</div>
             </div>
             <div className="w-1/3">

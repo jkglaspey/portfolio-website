@@ -2,10 +2,13 @@ import Particles from "react-tsparticles";
 import React, { useCallback } from "react";
 import { loadFull } from "tsparticles";
 
-const ParticleBackground = () => {
+const ParticleBackground = ({ isDarkMode }) => {
     const particlesInit = async (main) => {
         await loadFull(main);
     };
+
+    const backgroundColor = isDarkMode ? "#1a202c" : "#ffffff";
+    const particleColor = isDarkMode? "#ffffff" : "#1a202c";
 
     return (
         <div className="particle">
@@ -19,13 +22,13 @@ const ParticleBackground = () => {
                     },
                     background: {
                         color: {
-                          value: "#1a202c"
+                          value: backgroundColor
                         },
                         zIndex: -1,
                     },
                     particles: {
                     color: {
-                        value: "#ffffff"
+                        value: particleColor
                     },
                     number: {
                         density: {

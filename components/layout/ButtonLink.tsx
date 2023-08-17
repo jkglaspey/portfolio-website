@@ -4,6 +4,7 @@ type ISectionProps = {
   title?: string;
   yPadding?: string;
   button?: ReactNode;
+  isDarkMode?: boolean;
 };
 
 const ButtonLink = (props: ISectionProps) => (
@@ -15,7 +16,7 @@ const ButtonLink = (props: ISectionProps) => (
     {(props.title || props.button) && (
       <div className="mb-12 text-center">
         {props.title && (
-          <h2 className="text-4xl font-bold text-white">{props.title}</h2>
+          <h2 className={`text-4xl font-bold ${props.isDarkMode ? "text-white" : "text-gray-900"}`}>{props.title}</h2>
         )}
         {props.button && (
           <div className="mt-4">{props.button}</div>

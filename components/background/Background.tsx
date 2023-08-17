@@ -6,7 +6,7 @@ type IBackgroundProps = {
 };
 
 const Background = (props: IBackgroundProps) => (
-  <div className={props.color}>
+  <div className={`transition-all duration-5000 ease-in-out ${props.color}`}>
     {props.children}
   </div>
 );
