@@ -67,7 +67,7 @@ const Hero = ({ isDarkMode, onToggleMode }) => {
             <div className="chat chat-end">
               {showChatBubble && (
                 <div className={`chat-bubble bg-gray-700 text-white animate-typing`}>
-                  {isDarkMode ? "That is much better." : "Wow, that is bright..."}
+                  {isDarkMode ? "That's easier on the eyes." : "Wow, that is bright..."}
                 </div>
               )}
             </div>

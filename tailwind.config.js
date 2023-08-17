@@ -1,5 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.node/,
+      se: 'raw-loader',
+    });
+    
+    return config;
+  },
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}', // Note the addition of the `app` directory.
     './pages/**/*.{js,ts,jsx,tsx,mdx}',

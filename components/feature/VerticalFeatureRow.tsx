@@ -11,6 +11,7 @@ type IVerticalFeatureRowProps = {
   imageAlts: string[];
   reverse?: boolean;
   isDarkMode?: boolean;
+  htmlFor?: string;
 };
 
 const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
@@ -32,14 +33,22 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
       <div className="w-full text-center sm:w-1/2 sm:px-6">
         <h3 className={`text-3xl font-semibold ${ props.isDarkMode ? "text-white" : "text-gray-900"}`}>{props.title}</h3>
         <div className={`mt-6 text-xl leading-9 ${ props.isDarkMode ? "text-white" : "text-gray-900"}`}>{props.description}</div>
-        <ButtonLink
-              title=""
-              button={
-                <button className="bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 border-b-4 border-amber-800 hover:border-amber-700 rounded active:bg-amber-600 active:shadow-[0_8px_9px_-4px_rgba(180,83,9,0.4),0_4px_18px_0_rgba(180,83,9,0.3)]">
+        <div className="flex">
+          <div>
+            
+          </div>
+          <ButtonLink
+            title=""
+            button={
+              <button>
+                <label htmlFor={props.htmlFor ? props.htmlFor : ''} className="btn drawer-button">
                   Learn more about {props.title}.
-                </button>
-              }
-            />
+                </label>
+              </button>
+            }
+          />
+        </div>
+        
       </div>
 
       <div className="w-full sm:w-1/2">
