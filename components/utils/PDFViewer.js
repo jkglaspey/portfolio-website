@@ -1,31 +1,32 @@
 // components/PDFViewer.js
 import React, { useState } from 'react';
-import { Document, Page } from 'react-pdf';
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import { useDarkMode } from '../context/DarkModeProvider';
+import { Document, Page, pdfjs } from "react-pdf";
 
-const PDFViewer = ({ pdfUrl }) => {
-  const [error, setError] = useState(null);
+async function createPDFViewer() {
+  pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+    'pdfjs-dist/build/pdf.worker.min.js',
+    import.meta.url,
+  ).toString();
+}
+
+const PDFViewer = () => {
   const { isDarkMode } = useDarkMode();
+  const [numPage, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
 
-  const handlePdfError = (error) => {
-    setError('An error occurred while loading the PDF.');
-    console.error('PDF error:', error);
-  };
+  function onDocumentLoadSuccess({numPages}){
+    setNumPages(numPage);
+    setPageNumber(1);
+  }
 
   return (
-    <div className="w-full h-screen flex items-center justify-center">
-      {error ? (
-        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-bold text-lg bg-red-500 p-4 rounded`}>
-          {error}
-        </div>
-      ) : (
-        <Document file={pdfUrl} onError={handlePdfError}>
-          <Page pageNumber={1} />
-        </Document>
-      )}
+    <div>
+      <Document file="./public/resume.pdf" onLoadSuccess={onDocumentLoadSuccess}>
+        <Page pageNumber={pageNumber} />
+      </Document>
     </div>
   );
-};
+}
 
 export default PDFViewer;

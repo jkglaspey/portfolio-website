@@ -6,7 +6,7 @@ import HeroOneButton from '../hero/HeroOneButton';
 
 const Hero = ({ isDarkMode, onToggleMode }) => {
   const [showChatBubble, setShowChatBubble] = useState(false);
-  const [chatBubbleTimer, setChatBubbleTimer] = useState(null);
+  const [chatBubbleTimer, setChatBubbleTimer] = useState<NodeJS.Timeout | null>(null);
 
   const showChatForSeconds = 3;
 
@@ -14,12 +14,12 @@ const Hero = ({ isDarkMode, onToggleMode }) => {
     if (showChatBubble) {
       setShowChatBubble(false);
 
-      setTimeout(() => {
-        setShowChatBubble(true);
+      if (chatBubbleTimer) {
+        clearTimeout(chatBubbleTimer);
+      }
 
-        if (chatBubbleTimer) {
-          clearTimeout(chatBubbleTimer);
-        }
+      const newTimer = setTimeout(() => {
+        setShowChatBubble(true);
 
         const newTimer = setTimeout(() => {
           setShowChatBubble(false);
@@ -27,20 +27,20 @@ const Hero = ({ isDarkMode, onToggleMode }) => {
 
         setChatBubbleTimer(newTimer);
       }, 500);
+
+      setChatBubbleTimer(newTimer);
     } else {
       setShowChatBubble(true);
 
-      setTimeout(() => {
-        if (chatBubbleTimer) {
-          clearTimeout(chatBubbleTimer);
-        }
+      if (chatBubbleTimer) {
+        clearTimeout(chatBubbleTimer);
+      }
 
-        const newTimer = setTimeout(() => {
-          setShowChatBubble(false);
-        }, showChatForSeconds * 1000);
+      const newTimer = setTimeout(() => {
+        setShowChatBubble(false);
+      }, showChatForSeconds * 1000);
 
-        setChatBubbleTimer(newTimer);
-      }, 500);
+      setChatBubbleTimer(newTimer);
     }
   };
 

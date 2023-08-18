@@ -6,7 +6,6 @@ import { Footer } from '../components/templates/Footer';
 import { ButtonLink } from '../components/layout/ButtonLink';
 import { ParticleBackground } from "../components/particles.js"
 import { useDarkMode } from '../components/context/DarkModeProvider';
-import PDFViewer from '../components/utils/PDFViewer';
 
 export default function About() {
 
@@ -19,10 +18,23 @@ export default function About() {
 
         <Section
           isDarkMode={isDarkMode}
-          title="Check out my resume."
+          title="Check out my Resume."
           description=""
         >
-          <PDFViewer pdfUrl="/resume.pdf" />
+          <div className={`flex justify-center text-xl ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+            Want to download a copy?
+          </div>
+          <Link className={`flex justify-center text-xl text-blue-500 hover:underline active:text-purple-500`} href="https://drive.google.com/file/d/1QTod-kSfNIfMiamQjl7a4YhNyBp2BA8V/view?usp=sharing">
+            Click here.
+          </Link>
+          
+          
+          <Break type="oneEighth" />
+          <img
+            className={`object-scale-down max-h-min m-auto ${isDarkMode? '' : 'border-single border-2 border-gray-900'}`}
+            src="images/resume-Joshua-Glaspey.png"
+            alt="Joshua Glaspey's Resume"
+          />
 
           <ButtonLink
             title=""

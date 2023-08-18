@@ -69,7 +69,7 @@ const VerticalFeatureWorkExperience = (props: IVerticalFeatureWorkExperienceProp
           {props.responsibilities.map((resp, index) => (
             <li
               key={index}
-              className={`py-1 hover:bg-gray-800 ${ props.isDarkMode ? "hover:bg-gray-800" : "hover:bg-gray-100"}`}
+              className={`py-1 ${ props.isDarkMode ? "hover:bg-gray-800" : "hover:bg-gray-200"}`}
             >
               {resp}
             </li>
