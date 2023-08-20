@@ -26,7 +26,19 @@ const Base = () => {
               </Link>
             </li>
             <li>
-              <Link href="#features" scroll={false}>
+              <Link href="#introduction" scroll={false}>
+              </Link>
+            </li>
+            <li>
+              <Link href="#skills" scroll={false}>
+              </Link>
+            </li>
+            <li>
+              <Link href="#experience" scroll={false}>
+              </Link>
+            </li>
+            <li>
+              <Link href="#projects" scroll={false}>
               </Link>
             </li>
             <li>
@@ -35,13 +47,11 @@ const Base = () => {
             </li>
           </ul>
         </nav>
-        
+
         <div id="hero">
           <Hero isDarkMode={isDarkMode} onToggleMode={toggleMode}/>
         </div>
-        <div id="features">
-          <VerticalFeatures isDarkMode={isDarkMode}/>
-        </div>
+        <VerticalFeatures isDarkMode={isDarkMode}/>
         <div id="footer">
           <Footer isDarkMode={isDarkMode}/>
         </div>

@@ -21,8 +21,19 @@ const CenteredFooter = (props: ICenteredFooterProps) => (
       {props.iconList}
     </div>
 
-    <Break type="oneEighth" />
-    <SendEmail />
+    <Break type="oneFourth" />
+    {/* If you want to add email direct contact (with API), modify <SendEmail />*/}
+
+    <div className={`text-xl ${props.isDarkMode ? "text-white" : "text-gray-900"}`}>
+        Or reach out to me via email. 📧
+    </div>
+    <div className={`text-l ${props.isDarkMode ? "text-white" : "text-gray-900"}`}>
+        Ask me anything! Just let me know you came from my website. 😁
+    </div>
+    <div className={`mt-5 text-2xl font-semibold ${props.isDarkMode ? "text-white" : "text-gray-900"}`}>
+        jkglaspey@gmail.com
+    </div>
+
     <Break type="oneFourth" />
 
     <div className="mt-8 text-sm">

@@ -143,6 +143,9 @@ export default function About() {
             Theme provided by{' '}
             <a className="footer-copyright no-underline hover:underline" href="https://creativedesignsguru.com">CreativeDesignsGuru</a>.
           </div>
+          <div className={`text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+            <a href="https://www.flaticon.com/free-icons/virtual-fitness" title="virtual fitness icons">Virtual fitness icons created by Freepik - Flaticon</a>
+          </div>
         </Section>
 
         
