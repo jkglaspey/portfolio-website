@@ -169,7 +169,7 @@ const VerticalFeatures = ({ isDarkMode }) => {
               ]}
               responsibilities={[
                 "Leading teaching groups to both reinforce ideas from the main lecture and to introduce new topics.",
-                'Hosting available "office hours" to help students with concerns about the class or responsbilities.',
+                'Hosting available "office hours" to help students with concerns about the class or responsibilities.',
                 "Grading student assignments.",
                 "Proctoring quizzes and exams.",
                 "Participating in weekly team meetings.",

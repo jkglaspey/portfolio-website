@@ -24,7 +24,7 @@ export default function About() {
           <div className={`flex justify-center text-xl ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
             Want to download a copy?
           </div>
-          <Link className={`flex justify-center text-xl text-blue-500 hover:underline active:text-purple-500`} href="https://drive.google.com/file/d/1QTod-kSfNIfMiamQjl7a4YhNyBp2BA8V/view?usp=sharing">
+          <Link className={`flex justify-center text-xl text-blue-500 hover:underline active:text-purple-500`} href="https://drive.google.com/file/d/1M6sUER2GKrtMKolRgVfF32Vppun4aXsB/view?usp=sharing">
             Click here.
           </Link>
           
@@ -32,7 +32,7 @@ export default function About() {
           <Break type="oneEighth" />
           <img
             className={`object-scale-down max-h-min m-auto ${isDarkMode? '' : 'border-single border-2 border-gray-900'}`}
-            src="images/resume-Joshua-Glaspey.png"
+            src="images/Resume-Joshua_Glaspey.png"
             alt="Joshua Glaspey's Resume"
           />
 
