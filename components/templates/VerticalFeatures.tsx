@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Date from '../utils/date'
 
 import { VerticalFeatureRow } from '../feature/VerticalFeatureRow';
 import { VerticalFeatureInformation } from '../feature/VerticalFeatureInformation';
@@ -10,7 +11,7 @@ import Break from '../layout/Break';
 import { ButtonLink } from '../layout/ButtonLink';
 import { ParticleBackground } from "../particles.js"
 
-const VerticalFeatures = ({ isDarkMode }) => {
+const VerticalFeatures = ({ isDarkMode, allProjectsData }) => {
   return (
     <div id="background">
       <ParticleBackground isDarkMode={isDarkMode}/>
@@ -34,14 +35,14 @@ const VerticalFeatures = ({ isDarkMode }) => {
               isDarkMode={isDarkMode}
               title1="I am a rising senior."
               title2="Burnett's Honors College at University of Central Florida."
-              description="I am currently pursuring a Bachelor's degree in Computer Engineering, with a minor in Mathematics. It all started with a passion of understanding the fundamentals of how computers operate in high school. Since then, I have worked with UI design, full stack web development, and video game creation. I am moving towards studying Artificial Intelligence, and the benefits it can bring to workflows."
+              description="I am currently pursuring a Bachelor's degree in Computer Engineering, with a minor in Mathematics. It all started with a passion of understanding the fundamentals of how computers operate in high school. Since then, I have worked with UI design, full stack web development, and video game creation. I am moving towards studying Machine Learning, and the benefits it can bring to workflows."
               image="/images/Burnett_Honors_College_UCF.png"
               imageAlt="Burnett's Honors College at UCF Emblem"
             />
             <Break type="oneEighth" />
             <VerticalFeatureInformation
               isDarkMode={isDarkMode}
-              title1="I am researching Artificial Intelligence."
+              title1="I am researching Machine Learning."
               title2="Currently working towards completing a Master's Degree in Machine Learning."
               description="I am continuing my journey at the University of Central Florida towards understanding complex Artificial Intelligence. I am beginning my pathway towards a Master's degree in Intelligent Systems and Machine Learning, while expanding on my undergraduate knowledge in both Computer Engineering and Mathematics. I intend to dive into research projects, which will be included in this website as progress ensues."
               image="/images/UCF-Machine-Learning-Badge.png"
@@ -580,6 +581,22 @@ const VerticalFeatures = ({ isDarkMode }) => {
                 </ul>
               </div>
             </div>
+          </div>
+
+
+
+
+
+          <div id="dynamic_work">
+            <ul>
+              {allProjectsData.map((project) => (
+                <li key={project.id}>
+                  <Link href={`/projects/${project.id}`}>{project.title}</Link>
+                  <br />
+                  {project.date}
+                </li>
+              ))}
+            </ul>
           </div>
         </Section>
       </div>

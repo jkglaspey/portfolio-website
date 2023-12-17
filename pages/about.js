@@ -181,7 +181,7 @@ export default function About() {
                 Where do my interests lie?
               </h3>
               <div className={`mt-6 text-xl leading-9 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-              I'm deeply passionate about <strong>artificial intelligence,</strong> particularly its potential to boost productivity by replicating human-like thinking for practical tasks. I'm also captivated by modern machine learning techniques like expert systems, evolutionary computation, and reinforcement learning. My appreciation extends to <strong>mathematics and data analysis.</strong> Moreover, I'm intrigued by advancements in <i>Mixed Reality</i> technology, especially how <strong>Augmented Reality</strong> can break language barriers and assist in real-world navigation. Lastly, I've actively pursued my love for tennis for over a decade.
+              I'm deeply passionate about <strong>machine learning,</strong> particularly its potential to boost productivity by replicating human-like thinking for practical tasks. I'm also captivated by modern machine learning techniques like expert systems, evolutionary computation, and reinforcement learning. My appreciation extends to <strong>mathematics and data analysis.</strong> Moreover, I'm intrigued by advancements in <i>Mixed Reality</i> technology, especially how <strong>Augmented Reality</strong> can break language barriers and assist in real-world navigation. Lastly, I've actively pursued my love for tennis for over a decade.
               </div>
             </div>
             <div className="w-full sm:w-1/3 relative">

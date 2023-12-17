@@ -1,7 +1,17 @@
 import { Base } from '../components/templates/Base';
+import { getSortedProjectsData } from '../lib/projects';
 
-export default function Home() {
+export async function getStaticProps() {
+  const allProjectsData = getSortedProjectsData();
+  return {
+    props: {
+      allProjectsData,
+    },
+  };
+}
+
+export default function Home({ allProjectsData }) {
   return (
-    <Base />
+    <Base allProjectsData={ allProjectsData }/>
   );
 }

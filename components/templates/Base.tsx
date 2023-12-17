@@ -8,7 +8,7 @@ import Hero from './Hero';
 import { VerticalFeatures } from './VerticalFeatures';
 import { useDarkMode } from '../context/DarkModeProvider';
 
-const Base = () => {
+const Base = ({ allProjectsData }) => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   const toggleMode = () => {
@@ -51,7 +51,7 @@ const Base = () => {
         <div id="hero">
           <Hero isDarkMode={isDarkMode} onToggleMode={toggleMode}/>
         </div>
-        <VerticalFeatures isDarkMode={isDarkMode}/>
+        <VerticalFeatures isDarkMode={isDarkMode} allProjectsData={allProjectsData}/>
         <div id="footer">
           <Footer isDarkMode={isDarkMode}/>
         </div>
