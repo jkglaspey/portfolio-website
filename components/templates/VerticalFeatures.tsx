@@ -271,333 +271,50 @@ const VerticalFeatures = ({ isDarkMode, allProjectsData }) => {
             <h3 className={`text-3xl font-semibold ${isDarkMode ? "text-white" : "text-gray-900"} text-center`}>
               Check out some of my <strong>projects.</strong>
             </h3>
-            <VerticalFeatureRow
-              isDarkMode={isDarkMode}
-              title="BlueShift"
-              description="Have you ever experienced being hunted in an isolate environment? This virtual reality project tests your problem solving skills, as well as evasive maneuvers while you are being chased by an alien entity. Blueshift was created using the Unity game engine, with resources being sourced from the Unity Asset Store."
-              images={[
-                "/images/blueshift/Blueshift_1.gif",
-                "/images/blueshift/Blueshift_2.png",
-                "/images/blueshift/Blueshift_3.gif",
-                "/images/blueshift/Blueshift_4.png",
-                "/images/blueshift/Blueshift_5.gif",
-                "/images/blueshift/Blueshift_6.png",
-              ]}
-              imageAlts={[
-                "Running down a hallway.",
-                "Hiding in a locker.",
-                "AI movement mapping",
-                "Dying to the monster",
-                "Freezing time",
-                "VRtual logo.",
-              ]}
-              htmlFor="blueshift-drawer"
-            />
-            <div className="drawer" style={{ zIndex: 9999 }}>
-              <input id="blueshift-drawer" type="checkbox" className="drawer-toggle" />
-              <div className="drawer-side">
-                <label htmlFor="blueshift-drawer" className="drawer-overlay"></label>
-                <ul className="menu p-4 w-1/3 h-full bg-base-200 text-base-content border-r-4 border-black flex-nowrap overflow-auto">
-
-                  <h3 className={`text-3xl font-semibold text-center`}>
-                    BlueShift.
-                  </h3>
-                  <div className={`mt-6 text-l pb-4 `}>
-                    Blueshift is a <i>virtual reality horror game</i> developed using the <strong>Unity</strong> game engine. You are isolated in a spacecraft setting, and must rely on evasion and scavenging to escape from an alien entity hunting you.
-                  </div>
-
-                  <Break type="oneEighth" />
-
-                  <h3 className={`text-2xl font-semibold text-center pb-4`}>
-                    Download the project!
-                  </h3>
-                  <div className="text-xl text-center pb-4">
-                    Check out the GitHub repository.
-                  </div>
-                  <a href="https://github.com/CATastrophic141/Blueshift" className="hover:underline text-blue-500 text-center text-xl">Click here.</a>
-                  
-                  <Break type="oneEighth" />
-
-                  <h3 className={`text-l font-semibold text-center`}>
-                    This game was created as a semester project for CAP4053 - AI for Game Development. Check out the course <a href="https://www.ucf.edu/catalog/undergraduate/#/courses/Hkg745kdj_" className="hover:underline text-blue-500">here.</a>
-                  </h3>
-
-                  <Break type="oneEighth" />
-
-                  <h3 className={`text-l font-semibold text-center`}>
-                    Unity is a cross-platform game developing engine created by Unity Technologies. Check out Unity <a href="https://unity.com/" className="hover:underline text-blue-500">here.</a>
-                  </h3>
-
-                  <Break type="oneEighth" />
-
-                  <h3 className={`text-xl font-semibold text-center pb-4`}>
-                    Alien AI Description.
-                  </h3>
-                  <li>
-                  • The alien utilizes a state machine as its governing behavior.
-                  </li>
-                  <li>
-                  • It uses optimized raycasting, as well as audio vicinity to track the player.
-                  </li>
-                  <li>
-                  • It is equipped with memory - a system implemented to help the alien find the player near recently-spotted locations.
-                  </li>
-                  <li>
-                  • The player can escape from the alien only if its sightline is broken long enough, or the player hides outside its observation area.
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-
-          
-            <VerticalFeatureRow
-              isDarkMode={isDarkMode}
-              title="Fyrecracker"
-              description='Fyrecracker is a project that intends to blend gameplay and deep learning artificial intelligence. Be the last of your friends standing by exploding them out of the playable area, or outlast AI agents trained through reinforcement learning algorithms. This project is created using Unreal Engine 5, and strives to produce a learning environment for AI entities.'
-              images={[
-                "/images/fyrecracker/Fyrecracker_1.png",
-                "/images/fyrecracker/Fyrecracker_2.gif",
-                "/images/fyrecracker/Fyrecracker_3.png",
-                "/images/fyrecracker/Fyrecracker_4.gif",
-              ]}
-              imageAlts={[
-                "AI model.",
-                "Running around a playable map.",
-                "AI blueprint.",
-                "Falling off the map.",
-              ]}
-              htmlFor="fyrecracker-drawer"
-              reverse
-            />
-            <div className="drawer drawer-end" style={{ zIndex: 9999 }}>
-              <input id="fyrecracker-drawer" type="checkbox" className="drawer-toggle" />
-              <div className="drawer-side">
-                <label htmlFor="fyrecracker-drawer" className="drawer-overlay"></label>
-                <ul className="menu p-4 w-1/3 h-full bg-base-200 text-base-content border-l-4 border-black flex-nowrap overflow-auto">
-                  <h3 className={`text-3xl font-semibold text-center`}>
-                    Fyrecracker.
-                  </h3>
-                  <div className={`mt-6 text-l pb-4 `}>
-                    Fyrecracker is a fast paced PvP game developed using Unreal Engine 5. Be the last remaining player in a battle of environment demolition. Blow up a voxel-based world, and launch your friends out of the map in this rapid explosion video game!
-                  </div>
-
-                  <Break type="oneEighth" />
-
-                  <h3 className={`text-2xl font-semibold text-center pb-4`}>
-                    WORK IN PROGRESS!
-                  </h3>
-                  <div className="text-xl text-center pb-4">
-                    Check out the GitHub repository.
-                  </div>
-                  <a href="https://github.com/jkglaspey/FyreCracker" className="hover:underline text-blue-500 text-center text-xl">Click here.</a>
-
-                  <Break type="oneEighth" />
-
-                  <h3 className={`text-l font-semibold text-center`}>
-                    Fyrecracker is based off a Minecraft minigame of the same name. Check out the original project <a href="https://www.minecraftmaps.com/game-maps/fyrecracker" className="hover:underline text-blue-500">here.</a>
-                  </h3>
-                  
-                  <Break type="oneEighth" />
-
-                  <h3 className={`text-l font-semibold text-center`}>
-                    Unreal Engine 5 is a next-generation game engine developed by Epic Games. Check out Unreal Engine <a href="https://www.unrealengine.com/en-US/unreal-engine-5" className="hover:underline text-blue-500">here.</a>
-                  </h3>
-
-                  <Break type="oneEighth" />
-
-                  <h3 className={`text-xl font-semibold text-center pb-4`}>
-                    This project will include <strong>deep learning AI agents</strong>.
-                  </h3>
-                  <li>
-                  • Agents will be trained with reinforcement learning.
-                  </li>
-                  <li>
-                  • Hundreds of 2-minute simulations on small specialized maps will undergo, and the last remaining AI will be given points based on the efficiency of eliminating the other agents.
-                  </li>
-                  <li>
-                  • The agent will be fully trained through a neural network. This includes movement, firing, and strategy.
-                  </li>
-                  <li>
-                  • The goal of providing small-scale rapid testing is to train the AI to be aggressive, as well as reinforce positive survival strategies.
-                  </li>
-                  <li>
-                  • Check back with this project in the future. There will be a video explanation of the entire process.
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-        
-
-            <VerticalFeatureRow
-              isDarkMode={isDarkMode}
-              title="Hush UCF"
-              description="Hush UCF aims to please the quiet voices who are worried about being held wrongfully responsible for sharing information about university life - whether it be bad reviews for professors or general advice. This website application was created using the MERN stack, and served as my first experience working with a full-stack application."
-              images={[
-                "/images/hushucf/Hushucf_1.png",
-                "/images/hushucf/Hushucf_2.png",
-                "/images/hushucf/Hushucf_3.png",
-                "/images/hushucf/Hushucf_4.png",
-                "/images/hushucf/Hushucf_5.png",
-              ]}
-              imageAlts={[
-                "Main website icon.",
-                "Figma planning for website.",
-                "Unit testing results.",
-                "ERD.",
-                "User diagram.",
-              ]}
-              htmlFor="hush-drawer"
-            />
-            <div className="drawer" style={{ zIndex: 9999 }}>
-              <input id="hush-drawer" type="checkbox" className="drawer-toggle" />
-              <div className="drawer-side">
-                <label htmlFor="hush-drawer" className="drawer-overlay"></label>
-                <ul className="menu p-4 w-1/3 h-full bg-base-200 text-base-content border-r-4 border-black flex-nowrap overflow-auto">
-
-                  <h3 className={`text-3xl font-semibold text-center`}>
-                    Hush UCF.
-                  </h3>
-                  <div className={`mt-6 text-l pb-4 `}>
-                    Hush UCF is a social media app that utilizes the <i>MERN stack</i> to create a <strong>full-stack</strong> web application. The primary goal of this website is to act as a safe platform to post confessions about anything related to UCF. This project was deployed to <a href="https://www.heroku.com/platform" className="hover:underline text-blue-500 text-center">Heroku</a>, and acted as an introduction to React and React Native.
-                  </div>
-
-                  <Break type="oneEighth" />
-
-                  <div className="text-xl text-center pb-4">
-                    Check out the GitHub repository.
-                  </div>
-                  <a href="https://github.com/kylekww/cop-4331-mern-project" className="hover:underline text-blue-500 text-center text-xl">Click here.</a>
-                  
-                  <Break type="oneEighth" />
-
-                  <h3 className={`text-l font-semibold text-center`}>
-                    This game was created as a 10-week project for COP4331 - Processes of Object-Oriented Software. Check out the course <a href="http://www.cs.ucf.edu/~turgut/COURSES/COP4331C_OOD_Fall19/COP4331C_OOD_Fall19.html" className="hover:underline text-blue-500">here.</a>
-                  </h3>
-
-                  <Break type="oneEighth" />
-
-                  <h3 className={`text-l font-semibold text-center`}>
-                    The MERN stack is a full-stack framework consisting of MongoDB, Express, React.js, and Node.js. For more information, click <a href="https://mern.js.org/" className="hover:underline text-blue-500">here.</a>
-                  </h3>
-
-                  <Break type="oneEighth" />
-
-                  <h3 className={`text-xl font-semibold text-center pb-4`}>
-                    Features.
-                  </h3>
-                  <ul>
-                    <li>
-                    • Post confessions under a 280 character limit. They will persist for one week.
+            <Break type="oneEighth" />
+            <div id="dynamic_work" className={`border-x-2 ${ isDarkMode ? "border-gray-100 bg-gray-900" : "border-gray-900 bg-white"}`} style={{width: '150%', marginLeft: '-25%'}}>
+              <ul>
+                <div className={`flex overflow-x-auto scrollbar scrollbar-h-0.5 space-x-8 px-8 py-8 ${ isDarkMode ? "scrollbar-thumb-gray-100" : "scrollbar-thumb-gray-900"}`}>
+                  {allProjectsData.map((project) => (
+                    <li key={project.id}>
+                      <Link href={`/projects/${project.id}`}>
+                        <div className={`group card border-4 w-96 h-5/6 flex bg-base-100 shadow-xl transform transition duration-500 hover:scale-110 active:scale-100 ${ isDarkMode ? "text-gray-100 bg-gray-900 border-gray-200" : "text-gray-900 bg-white border-gray-800"}`}>
+                          <figure className="w-auto transform transition duration-500 group-hover:opacity-25">
+                            <img
+                              src={`/images/${project.images[0]}`}
+                              alt={`${project.alts[0]}`}
+                            />
+                          </figure>
+                          <div className="card-body transform transition duration-500 group-hover:opacity-25">
+                            <h2 className="card-title justify-center align-center">
+                              {project.title}
+                            </h2>
+                            <h3 className="italic">{project.subtitle}</h3>
+                            <p className="text-xs">
+                              <Date dateString={project.date} />
+                            </p>
+                            <p className={`text-base text-center font-bold italic ${project.status == "COMPLETE." ? "text-green-600" : "text-red-600"}`}>
+                              {project.status}
+                            </p>
+                            <div className="card-actions justify-end">
+                              {project.keywords.map((keyword) => (
+                                <div className="text-xs badge badge-outline">{keyword}</div>
+                              ))}
+                            </div>
+                          </div>
+                          <div className={`text-4xl group-hover-overlay absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center opacity-0 transition-opacity transform transition duration-500 group-hover:opacity-100 ${ isDarkMode ? "text-gray-100" : "text-gray-900"}`}>
+                              <p className="text-center">
+                                Click here to learn more!
+                              </p>
+                          </div>
+                        </div>
+                      </Link>
                     </li>
-                    <li>
-                    • Upvote, downvote, or reply to other confessions.
-                    </li>
-                    <li>
-                    • Filter confessions by either the most liked or most recent.
-                    </li>
-                    <li>
-                    • Create a profile to manage confessions. Profile IDs are not displayed on the original confession post, but they do appear on replies.
-                    </li>
-                  </ul>
-                  • The project was fully unit tested using Jest. To find out more, click <a href="https://jestjs.io/" className="hover:underline text-blue-500">here.</a>
-                </ul>
-              </div>
+                  ))}
+                </div>
+              </ul>
             </div>
-
-
-            <VerticalFeatureRow
-              isDarkMode={isDarkMode}
-              title="Team Scripted"
-              description={`We started off as a couple of friends working on passion projects through the video game "Minecraft." However, throughout the years, we were able to establish ourselves as a freelance group who gathered an official community and submitted projects directly to Mojang.`}
-              images={[
-                "/images/teamscripted/Teamscripted_1.png",
-                "/images/teamscripted/Teamscripted_2.png",
-                "/images/teamscripted/Teamscripted_3.png",
-                "/images/teamscripted/Teamscripted_4.png",
-                "/images/teamscripted/Teamscripted_5.png",
-                "/images/teamscripted/Teamscripted_6.png",
-                "/images/teamscripted/Teamscripted_7.png",
-                "/images/teamscripted/Teamscripted_8.png",
-              ]}
-              imageAlts={[
-                "Team Scripted Logo.",
-                "Rematch Minigame.",
-                "Sky Scapers Minigame.",
-                "Gameplay from Rematch.",
-                "Gameplay from Sky Scapers.",
-                "Gameplay from Sky Scapers.",
-                "Scenic view from Rematch.",
-                "Scenic view from Rematch.",
-              ]}
-              htmlFor="teamscripted-drawer"
-              reverse
-            />
-            <div className="drawer drawer-end" style={{ zIndex: 9999 }}>
-              <input id="teamscripted-drawer" type="checkbox" className="drawer-toggle" />
-              <div className="drawer-side">
-                <label htmlFor="teamscripted-drawer" className="drawer-overlay"></label>
-                <ul className="menu p-4 w-1/3 h-full bg-base-200 text-base-content border-l-4 border-black flex-nowrap overflow-auto">
-                  <h3 className={`text-3xl font-semibold text-center`}>
-                    Team Scripted.
-                  </h3>
-                  <div className={`mt-6 text-l pb-4 `}>
-                    I cofounded Team Scripted, a small freelance team with a goal to create quality projects within the Minecraft community. Over time, we have had several minigames submitted to Mojang's official <a href="https://www.minecraft.net/en-us/realms" className="hover:underline text-blue-500">Realms</a> collection, as well as established a community of several hundred members.
-                  </div>
-                  <Break type="oneEighth" />
-                  <h3 className={`text-3xl font-semibold text-center pb-4`}>
-                    Check out our projects!
-                  </h3>
-                  <Break type="oneEighth" />
-                  <div className="text-2xl text-center font-semibold pb-2">
-                  <a href="https://www.minecraftmaps.com/game-maps/sky-scapers" className="hover:underline text-blue-500 text-center text-xl">Sky Scapers.</a>
-                  </div>
-                  <div className="text-xl text-center pb-4">
-                    In this fast paced minigame, fly through the skies and fire beams at your friends.
-                  </div>
-                  <Break type="oneEighth" />
-                  <div className="text-2xl text-center font-semibold pb-2">
-                  <a href="https://www.planetminecraft.com/project/rematch/" className="hover:underline text-blue-500 text-center text-xl">Rematch.</a>
-                  </div>
-                  <div className="text-xl text-center pb-4">
-                    Scavenge a large map for resources, then convert your profits to weapons for battle in this strategic PvP minigame.
-                  </div>
-                  <Break type="oneEighth" />
-                  <div className="text-2xl text-center font-semibold pb-2">
-                  <a href="https://www.minecraftmaps.com/game-maps/sprint-racer" className="hover:underline text-blue-500 text-center text-xl">Sprint Racer.</a>
-                  </div>
-                  <div className="text-xl text-center pb-4">
-                    Experience a racing game full of quality, features, optimizations, and years of support.
-                  </div>
-                  <Break type="oneEighth" />
-                  <h3 className={`text-l font-semibold text-center`}>
-                    Check out the StickyPiston Minecraft server hosting website. We have been joyed been working as partners with them and their community. Click <a href="https://stickypiston.co/" className="hover:underline text-blue-500">here.</a>
-                  </h3>
-                  <Break type="oneEighth" />
-                  <h3 className={`text-l font-semibold text-center`}>
-                    Minecraft provides the community with a custom scripting language, and works as an internal game engine. Due to years of being exposed to this, I have assimilated myself into the game development workflow.
-                  </h3>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-
-
-
-
-          <div id="dynamic_work">
-            <ul>
-              {allProjectsData.map((project) => (
-                <li key={project.id}>
-                  <Link href={`/projects/${project.id}`}>{project.title}</Link>
-                  <br />
-                  {project.date}
-                </li>
-              ))}
-            </ul>
-          </div>
+          </div>          
         </Section>
       </div>
     </div>
