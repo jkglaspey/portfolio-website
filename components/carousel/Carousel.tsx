@@ -3,9 +3,10 @@ import React, { useState, useEffect } from 'react';
 interface CarouselProps {
   images: string[];
   imageAlts: string[];
+  container_height: string;
 }
 
-const Carousel: React.FC<CarouselProps> = ({ images, imageAlts }) => {
+const Carousel: React.FC<CarouselProps> = ({ images, imageAlts, container_height }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [fadeOut, setFadeOut] = useState(false);
 
@@ -43,12 +44,12 @@ const Carousel: React.FC<CarouselProps> = ({ images, imageAlts }) => {
   return (
     <div id="default-carousel" className="relative w-full" data-carousel="slide">
       {/* Carousel wrapper */}
-      <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+      <div className="relative overflow-hidden rounded-lg md:h-96">
         {images.map((image, index) => (
           <div
             key={index}
             className={`${
-              currentSlide === index ? 'block' : 'hidden'
+              currentSlide === index ? 'flex items-center justify-center' : 'hidden'
             } duration-700 ease-in-out transition-opacity`}
             data-carousel-item
             style={{
@@ -57,7 +58,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, imageAlts }) => {
           >
             <img
               src={image}
-              className="absolute block w-full h-full object-cover rounded-lg"
+              className={`block ${container_height} w-auto rounded-lg`}
               alt={imageAlts[index]}
             />
           </div>

@@ -6,6 +6,7 @@ import { Footer } from '../components/templates/Footer';
 import { ButtonLink } from '../components/layout/ButtonLink';
 import { ParticleBackground } from "../components/particles.js"
 import { useDarkMode } from '../components/context/DarkModeProvider';
+import { EmbedPDF } from "@simplepdf/react-embed-pdf";
 
 export default function About() {
 
@@ -21,20 +22,14 @@ export default function About() {
           title="Check out my Resume."
           description=""
         >
-          <div className={`flex justify-center text-xl ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-            Want to download a copy?
-          </div>
-          <Link className={`flex justify-center text-xl text-blue-500 hover:underline active:text-purple-500`} href="https://drive.google.com/file/d/1M6sUER2GKrtMKolRgVfF32Vppun4aXsB/view?usp=sharing">
-            Click here.
-          </Link>
-          
-          
+          <EmbedPDF>
+            <a href='https://zgglvuqw.simplepdf.eu/form/ed9b4a0e4b2603dc8595d0bc02ba8f1d816ee7c3a2a546ab4713568db8bb94ca'>
+              <div className={`flex justify-center text-xl hover:underline ${isDarkMode ? 'text-blue-500' : 'text-blue-600'}`}>
+                Click here.
+              </div>
+            </a>
+          </EmbedPDF>
           <Break type="oneEighth" />
-          <img
-            className={`object-scale-down max-h-min m-auto ${isDarkMode? '' : 'border-single border-2 border-gray-900'}`}
-            src="images/Resume-Joshua_Glaspey.png"
-            alt="Joshua Glaspey's Resume"
-          />
 
           <ButtonLink
             title=""
@@ -44,7 +39,6 @@ export default function About() {
               </button>
             }
           />
-
 
           <Footer isDarkMode={isDarkMode}/>
         </Section>

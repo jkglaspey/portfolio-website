@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import Date from '../utils/date'
 
-import { VerticalFeatureRow } from '../feature/VerticalFeatureRow';
 import { VerticalFeatureInformation } from '../feature/VerticalFeatureInformation';
 import HorizontalLinkList from '../feature/HorizontalLinkList';
 import { VerticalFeatureWorkExperience } from '../feature/VerticalFeatureWorkExperience';

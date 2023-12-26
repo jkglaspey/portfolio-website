@@ -52,7 +52,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
       </div>
 
       <div className="w-full sm:w-1/2">
-        <Carousel images={props.images} imageAlts={props.imageAlts}/>
+        <Carousel images={props.images} imageAlts={props.imageAlts} container_height="h-auto"/>
       </div>
         {/* <img src={`${router.basePath}${props.image}`} alt={props.imageAlt} /> */}
     </div>

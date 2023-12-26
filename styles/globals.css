@@ -117,3 +117,19 @@ ul {
 .cursor-pointer {
   transition: transform 0.5s ease-in-out;
 }
+
+.hyperlink {
+  @apply hover:underline text-blue-500 text-lg text-left mt-4;
+}
+
+.italic_text {
+  @apply italic
+}
+
+.underline_text {
+  @apply underline text-xl
+}
+
+.list_text {
+  @apply text-sm
+}
