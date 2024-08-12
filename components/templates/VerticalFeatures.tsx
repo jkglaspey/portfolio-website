@@ -32,9 +32,9 @@ const VerticalFeatures = ({ isDarkMode, allProjectsData }) => {
             <Break type="oneEighth" />
             <VerticalFeatureInformation
               isDarkMode={isDarkMode}
-              title1="I am a rising senior."
+              title1="I graduated as a Computer Engineer."
               title2="Burnett's Honors College at University of Central Florida."
-              description="I am currently pursuring a Bachelor's degree in Computer Engineering, with a minor in Mathematics. It all started with a passion of understanding the fundamentals of how computers operate in high school. Since then, I have worked with UI design, full stack web development, and video game creation. I am moving towards studying Machine Learning, and the benefits it can bring to workflows."
+              description="I completed a Bachelor's degree in Computer Engineering with a minor in Mathematics in May 2024. It all started with a passion of understanding the fundamentals of how computers operate in high school. Since then, I have worked with UI design, full stack web development, and video game creation."
               image="/images/Burnett_Honors_College_UCF.png"
               imageAlt="Burnett's Honors College at UCF Emblem"
             />
@@ -43,7 +43,7 @@ const VerticalFeatures = ({ isDarkMode, allProjectsData }) => {
               isDarkMode={isDarkMode}
               title1="I am researching Machine Learning."
               title2="Currently working towards completing a Master's Degree in Machine Learning."
-              description="I am continuing my journey at the University of Central Florida towards understanding complex Artificial Intelligence. I am beginning my pathway towards a Master's degree in Intelligent Systems and Machine Learning, while expanding on my undergraduate knowledge in both Computer Engineering and Mathematics. I intend to dive into research projects, which will be included in this website as progress ensues."
+              description="I am continuing my journey at the University of Central Florida towards understanding complex Artificial Intelligence. I am a current student in a Master's degree in Intelligent Systems and Machine Learning. I intend to dive into research projects, which will be included in this website as progress ensues."
               image="/images/UCF-Machine-Learning-Badge.png"
               imageAlt="UCF Machine Learning Badge"
               right
@@ -81,7 +81,7 @@ const VerticalFeatures = ({ isDarkMode, allProjectsData }) => {
                 { title: 'HTML & CSS' },
                 { title: 'Github' },
                 { title: 'Next.js' },
-                { title: 'Vercel' },
+                { title: 'Angular' },
                 { title: 'React' },
                 { title: 'Tailwind CSS' },
                 { title: 'Headless UI' },
@@ -104,6 +104,7 @@ const VerticalFeatures = ({ isDarkMode, allProjectsData }) => {
               links={[
                 { title: 'Java' },
                 { title: 'JavaScript' },
+                { title: 'TypeScript' },
                 { title: 'C' },
                 { title: 'C#' },
                 { title: 'Python' },
@@ -154,6 +155,29 @@ const VerticalFeatures = ({ isDarkMode, allProjectsData }) => {
             <h3 className={`text-3xl font-semibold ${isDarkMode ? "text-white" : "text-gray-900"} text-center`}>
               Look at my previous <strong>industry experience.</strong>
             </h3>
+            <VerticalFeatureWorkExperience
+              isDarkMode={isDarkMode}
+              title="Software Engineer Intern."
+              company="Microsoft"
+              date="May 2024 - August 2024."
+              location="Redmond, Washington."
+              link="https://www.microsoft.com/en-us/"
+              description={[
+                "As a Software Engineering Intern at Microsoft, I was involved in enhancing Power BI, a leading data visualization and business intelligence platform. My role centered on applying agile engineering principles to address the breaking down and execution of a technical feature.",
+                "In this position, I was responsible for frontend work within the web service for Power BI. I collaborated closely with cross-functional teams, including Program Managers, to align on user requirements and promise high-quality deliverables. This experience enabled me to refine my skills in software design, development, and testing.",
+                "My internship provided me with hands-on experience in leveraging modern technologies and methodologies, and it sharpened my ability to manage complex projects effectively. I learned to navigate the dynamic landscape of software engineering, balancing multiple tasks while adhering to project timelines."
+                ]}
+              responsibilities={[
+                "Contributed to the planning and development of a new feature within the Power BI platform.",
+                "Engaged in drafting, coding, debugging, testing, and validating to ensure high performance and reliability of the software.",
+                "Collaborated with team members to gather requirements and ensure communication throughout the project.",
+                "Utilized related tools and best practices to enhance software functionality and user experience.",
+                "Participated in team meetings and code reviews to maintain quality and coherence within the project."
+              ]}
+              image="/images/power_bi_logo.png"
+              imageAlt="Microsoft PowerBI Logo"
+            />
+            <Break type="oneEighth" />
             <VerticalFeatureWorkExperience
               isDarkMode={isDarkMode}
               title="Undergraduate Teaching Assistant."
