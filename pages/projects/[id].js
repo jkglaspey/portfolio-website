@@ -7,7 +7,7 @@ import Carousel from '../../components/carousel/Carousel';
 import { parseISO, format } from 'date-fns';
 import { Footer } from '../../components/templates/Footer';
 import { ButtonLink } from '../../components/layout/ButtonLink';
-import { EmbedPDF } from "@simplepdf/react-embed-pdf";
+import Break from '../../components/layout/Break';
 
 export async function getStaticProps({ params }) {
     const projectData = await getProjectData(params.id);
@@ -62,9 +62,22 @@ export default function Project({ projectData }) {
                 `<span class="list_text">${item_num++}. ${li}</span>`
             )
         });
-    
+
         return { __html: styledContent };
-      };
+    };
+
+    // Determine the status color based on project status
+    const statusColor = projectData.status === "COMPLETE."
+        ? "text-green-600"
+        : projectData.status === "IN PROGRESS."
+        ? "text-yellow-500"  // Gold color
+        : "text-red-600";
+
+    const statusText = projectData.status === "COMPLETE."
+        ? "Completed:"
+        : projectData.status === "IN PROGRESS."
+        ? "In Progress:"
+        : "Stopped:";
 
     return (
         <div>
@@ -83,42 +96,63 @@ export default function Project({ projectData }) {
                     {projectData.title}
                 </h3>
                 <div className={`text-l text-center mt-4 flex items-center justify-center space-x-1`}>
-                    <div className={`${projectData.status == "COMPLETE." ? "text-green-600" : "text-red-600"}`}>
-                        {projectData.status == "COMPLETE." ? "Completed:" : "Last modified:"}
+                    <div className={statusColor}>
+                        {statusText}
                     </div>
                     <time className={"font-semibold"} dateTime={projectData.date}>{format(parseISO(projectData.date), 'LLLL d, yyyy')}</time>
                     {"."}
                 </div>
-                <div className={'text-2xl text-center mt-4 flex items-center justify-center space-x-1 text-red-600'}>
-                    {projectData.status == "COMPLETE." ? "" : "This project is currently IN-PROGRESS."}
+                <div className={`text-2xl text-center mt-4 flex items-center justify-center space-x-1 ${statusColor}`}>
+                    {projectData.status === "COMPLETE." ? "" : projectData.status === "IN PROGRESS." ? "This project is currently IN PROGRESS." : "This project is currently STOPPED."}
                 </div>
                 <hr className={`my-8 h-0.5 w-2/3 sm:w-1/2 border-t-0 ${isDarkMode ? "bg-white" : "bg-gray-900"} opacity-100 dark:opacity-50`} />
 
                 <div className={`text-lg text-justify mt-4 flex items-center justify-center space-x-1`}>
                     {projectData.description}
                 </div>
+                
+                {projectData.pdfPath === "N/A" ? ("") : (
+                    <div className="flex flex-col items-center w-full">
+                        {/* Title Section */}
+                        <div className="text-xl text-left mt-4 mb-4 flex items-center justify-center w-full">
+                            <p>Check out the official PDF for {projectData.title}</p>
+                        </div>
 
-                <div className={`text-xl text-left mt-4 flex items-center justify-center space-x-1`}>
-                {projectData.pdfLink === "N/A" ? ("") : (
-                    <p>
-                        Check out the official PDF for {projectData.title}
-                        <EmbedPDF>
-                            <a href={projectData.pdfLink}>
-                                <div className={`text-center hover:underline ${isDarkMode ? 'text-blue-500' : 'text-blue-600'}`}>
-                                    Click here.
-                                </div>
-                            </a>
-                        </EmbedPDF>
-                    </p>
-                    )}
-                </div>
+                        {/* PDF Section */}
+                        <div className="flex justify-center items-center w-full h-[calc(100vh-4rem)]">
+                            <embed
+                                src={projectData.pdfPath}
+                                type="application/pdf"
+                                className="w-full h-full"
+                            ></embed>
+                        </div>
+                    </div>
+                )}
+
 
                 <div className={`text-lg text-left mt-4 flex items-center justify-center space-x-1`}>
                     <div dangerouslySetInnerHTML={applyStyleToHereLinks(projectData.contentHtml)} />
                 </div>
+                
+                {projectData.extraPdf == 'N/A' && !Array.isArray(projectData.extraPdf) ? ("") : (
+                    <p>
+                        <Break type="oneEighth" />
+                        <div className="text-xl flex justify-center items-center">
+                            Extra Links.
+                        </div>
+                        <div className={`text-lg text-center mt-4`}>
+                            {projectData.extraPdf.map((pdf, index) => {
+                                const [pdfTitle, pdfPath] = pdf.split('|');
+                                return (
+                                    <div key={index}>
+                                        Click to download <a href={pdfPath} download className="text-blue-500 underline">{pdfTitle}</a>.
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </p>
+                )}
             </article>
-
-
 
             <ButtonLink
                 title=""
@@ -129,7 +163,6 @@ export default function Project({ projectData }) {
                 }
             />
             <Footer isDarkMode={isDarkMode}/>
-
         </div>
     );
   }

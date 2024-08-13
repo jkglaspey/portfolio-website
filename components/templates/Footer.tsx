@@ -11,15 +11,15 @@ const Footer = ({ isDarkMode }) => (
       iconList={(
         <FooterIconList 
           isDarkMode={isDarkMode}
-          titles={['LinkedIn', 'GitHub', 'HackerRank']}>
+          titles={['LinkedIn', 'GitHub', 'LeetCode']}>
           <Link href="http://www.linkedin.com/in/joshua-glaspey">
             <img src="/images/footer/linkedin-logo.png" alt="LinkedIn" />
           </Link>
           <Link href="https://github.com/jkglaspey">
             <img src="/images/footer/github-logo.png" alt="GitHub" />
           </Link>
-          <Link href="https://www.hackerrank.com/jkglaspey">
-            <img src="/images/footer/hackerrank-logo.png" alt="HackerRank" />
+          <Link href="https://leetcode.com/u/9digger/">
+            <img src="/images/footer/leetcode-logo.png" alt="LeetCode" />
           </Link>
         </FooterIconList>
       )}
