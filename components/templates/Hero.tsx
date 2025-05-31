@@ -92,27 +92,27 @@ const Hero = ({ isDarkMode, onToggleMode }) => {
                         className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-auto"
                       >
                         <li>
-                          <Link href="/#introduction" className="text-gray-800">
+                          <Link href="/#introduction" className="text-gray-600">
                             My introduction.
                           </Link>
                         </li>
                         <li>
-                          <Link href="/#skills" className="text-gray-800">
+                          <Link href="/#skills" className="text-gray-600">
                             My skills.
                           </Link>
                         </li>
                         <li>
-                          <Link href="/#experience" className="text-gray-800">
+                          <Link href="/#experience" className="text-gray-600">
                             My experience.
                           </Link>
                         </li>
                         <li>
-                          <Link href="/#projects" className="text-gray-800">
+                          <Link href="/#projects" className="text-gray-600">
                             My projects.
                           </Link>
                         </li>
                         <li>
-                          <Link href="/#footer" className="text-gray-800">
+                          <Link href="/#footer" className="text-gray-600">
                             Contact me.
                           </Link>
                         </li>
@@ -133,12 +133,12 @@ const Hero = ({ isDarkMode, onToggleMode }) => {
                         className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-auto"
                       >
                         <li>
-                          <Link href="/about" className="text-gray-800">
+                          <Link href="/about" className="text-gray-600">
                             About me.
                           </Link>
                         </li>
                         <li>
-                          <Link href="/resume" className="text-gray-800">
+                          <Link href="/resume" className="text-gray-600">
                             My Resume.
                           </Link>
                         </li>

@@ -1,0 +1,65 @@
+---
+title: Improving Adaptive Cruise Control via Curriculum and Anti-Curriculum Reinforcement Learning
+subtitle: Reinforcement learning-based ACC system using staged vehicle behavior profiles of increasing and decreasing difficulty
+images:
+    - 'cruisecontrolcurriculumlearning/cruisecontrolcurriculumlearning_1.png'
+    - 'cruisecontrolcurriculumlearning/cruisecontrolcurriculumlearning_2.png'
+    - 'cruisecontrolcurriculumlearning/cruisecontrolcurriculumlearning_3.png'
+    - 'cruisecontrolcurriculumlearning/cruisecontrolcurriculumlearning_4.png'
+    - 'cruisecontrolcurriculumlearning/cruisecontrolcurriculumlearning_5.png'
+    - 'cruisecontrolcurriculumlearning/cruisecontrolcurriculumlearning_6.png'
+alts:
+    - 'Curriculum, anti-curriculum, and baseline speed profile graphs.'
+    - 'Performance of all training strategies during all 3600-timesteps of the testing speed profile.'
+    - 'Visualization of following distance from curriculum learning profile.'
+    - 'Visualization of vehicle speeds from curriculum learning profile.'
+    - 'Visualization of cruise control adaptive distance from curriculum learning profile.'
+    - 'Visualization of jerk analysis from curriculum learning profile.'
+keywords:
+    - 'reinforcement learning'
+    - 'curriculum learning'
+    - 'adaptive cruise control'
+    - 'anti-curriculum learning.'
+date: '2025-04-30'
+status: 'COMPLETE.'
+pdfPath: '/documents/cruisecontrolcurriculumlearning.pdf'
+extraPdf: 'N/A'
+---
+
+<br />
+
+--------------------
+
+<br />
+
+# Abstract:
+
+This project applies curriculum learning and anti-curriculum learning to a reinforcement learning-based Adaptive Cruise Control (ACC) environment. The agent learns to maintain safe following distance behind a lead vehicle while minimizing jerk and speed error. Difficulty levels are introduced by generating lead vehicle profiles with increasing variability and aggression in acceleration patterns. 
+
+Curriculum learning trains the agent starting from easy profiles progressing to difficult, while anti-curriculum does the opposite. A baseline model is also trained solely on the hardest profile. Evaluation is performed on a 3600-step episode containing all three difficulty levels sequentially.
+
+# Methodology:
+
+The agent uses a Soft Actor-Critic (SAC) algorithm with a continuous action space. Curriculum stages are defined by generating synthetic lead vehicle velocity sequences of varying difficulty:
+
+- **Easy**: low acceleration variance, smooth deceleration
+- **Medium**: moderate acceleration and occasional abrupt stops
+- **Difficult**: high variance, aggressive acceleration/deceleration
+
+During training, curriculum and anti-curriculum variants stage the environments differently while keeping hyperparameters consistent. All agents are tested on a held-out evaluation track consisting of 1200 steps from each difficulty class.
+
+# Results:
+
+Curriculum learning achieved the best overall performance in average reward, distance error, and time spent in the safety zone. Anti-curriculum learning performed moderately well but struggled in difficult sections. The baseline model underperformed, showing the benefit of incremental exposure to harder environments.
+
+# Discussion:
+
+Curriculum learning enabled smoother policy formation, while anti-curriculum often forced premature convergence due to exposure to high-variance states too early. All agents showed difficulty in jerk minimization on difficult profiles, suggesting reward shaping improvements.
+
+# Future Work:
+
+Future improvements include experimenting with PPO or TD3 algorithms, redesigning the reward function to better penalize jerk, and introducing real-world driving profiles for robustness testing.
+
+# Link:
+
+💻 **GitHub** [https://github.com/jkglaspey/EEL6938-Final-Project-Curriculum-Learning-ACC](https://github.com/jkglaspey/EEL6938-Final-Project-Curriculum-Learning-ACC)

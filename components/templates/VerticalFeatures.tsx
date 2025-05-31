@@ -295,7 +295,7 @@ const VerticalFeatures = ({ isDarkMode, allProjectsData }) => {
               Check out some of my <strong>projects.</strong>
             </h3>
             <Break type="oneEighth" />
-            <div id="dynamic_work" className={`border-x-2 ml-0 ${ isDarkMode ? "border-gray-100 bg-gray-900" : "border-gray-900 bg-white"}`} style={{width: '150%'}}>
+            <div id="dynamic_work" className={`border-x-2 ml-0 ${ isDarkMode ? "border-gray-100 bg-gray-900" : "border-gray-900 bg-white"}`} style={{width: '100%'}}>
               <ul>
                 <div className={`flex overflow-x-auto scrollbar scrollbar-h-0.5 space-x-8 px-8 py-8 ${ isDarkMode ? "scrollbar-thumb-gray-100" : "scrollbar-thumb-gray-900"}`}>
                   {allProjectsData.map((project) => (

@@ -1,0 +1,61 @@
+---
+title: Security and Malware Vulnerabilities in Bluetooth Low Energy
+subtitle: Comprehensive analysis of known BLE vulnerabilities, attack vectors, and mitigation strategies from 14 academic sources
+images:
+    - 'bluetoothsurvey/bluetoothsurvey_1.png'
+    - 'bluetoothsurvey/bluetoothsurvey_2.png'
+    - 'bluetoothsurvey/bluetoothsurvey_3.png'
+    - 'bluetoothsurvey/bluetoothsurvey_4.png'
+    - 'bluetoothsurvey/bluetoothsurvey_5.png'
+    - 'bluetoothsurvey/bluetoothsurvey_6.png'
+    - 'bluetoothsurvey/bluetoothsurvey_7.png'
+    - 'bluetoothsurvey/bluetoothsurvey_8.png'
+alts:
+    - 'Bluetooth low energy icon.'
+    - 'BLE security vulnerabilities and attacks tree diagram.'
+    - 'Passive sniffing attack.'
+    - 'Man-in-the-middle attack.'
+    - 'MAC spoofing attack.'
+    - 'Jamming attack.'
+    - 'Authentication attack.'
+    - 'Blue-printing attack.'
+keywords:
+    - 'bluetooth'
+    - 'security'
+    - 'bluetooth low energy'
+    - 'vulnerabilities'
+    - 'malware'
+date: '2025-04-22'
+status: 'COMPLETE.'
+pdfPath: '/documents/bluetoothsurvey.pdf'
+extraPdf: 'N/A'
+---
+
+<br />
+
+--------------------
+
+<br />
+
+# Abstract:
+
+This survey presents a comprehensive study of Bluetooth Low Energy (BLE) security threats, with a focus on both protocol-level vulnerabilities and implementation flaws across IoT and medical devices. It categorizes attacks including passive sniffing, man-in-the-middle (MITM), DoS, pairing-based attacks, and BLE spoofing. Each threat is supported by academic literature from 14 research papers.
+
+We provide detailed technical explanations, real-world implications, and mitigation strategies for each class of attack. The report concludes with a discussion on persistent limitations in BLE security and future recommendations for protocol improvement and device-side safeguards.
+
+# Methodology:
+
+Fourteen peer-reviewed papers were selected based on relevance, recency, and breadth of coverage. Each attack type is presented with:
+
+- A technical breakdown of how the attack works
+- Known devices and use cases impacted
+- Proposed mitigation strategies (when available)
+
+# Discussion:
+
+Findings highlight the need for:
+
+- Standardized user authentication steps during pairing
+- Firmware-level encryption enforcement for stored credentials
+- More restrictive BLE stack designs at the OS level, especially for Android
+- Improved BLE protocol design to isolate paired device trust zones

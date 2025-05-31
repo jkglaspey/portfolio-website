@@ -1,0 +1,69 @@
+---
+title: Evaluating the Impact of Data Augmentation and Regularization On Image Denoising Performance Using Deep Neural Networks
+subtitle: Evaluating augmentation and regularization strategies for pixel-level restoration
+images:
+    - 'dataaugmentationdeeplearning/dataaugmentationdeeplearning_1.png'
+    - 'dataaugmentationdeeplearning/dataaugmentationdeeplearning_2.png'
+    - 'dataaugmentationdeeplearning/dataaugmentationdeeplearning_3.png'
+    - 'dataaugmentationdeeplearning/dataaugmentationdeeplearning_4.png'
+    - 'dataaugmentationdeeplearning/dataaugmentationdeeplearning_5.png'
+    - 'dataaugmentationdeeplearning/dataaugmentationdeeplearning_6.png'
+    - 'dataaugmentationdeeplearning/dataaugmentationdeeplearning_7.png'
+    - 'dataaugmentationdeeplearning/dataaugmentationdeeplearning_8.png'
+alts:
+    - 'Example visual result from CNN implementation.'
+    - 'Example visual result from CNN implementation.'
+    - 'Example visual result from CNN implementation.'
+    - 'Example visual result from CNN implementation.'
+    - 'Example visual result from CNN implementation.'
+    - 'Image denoising network architecture.'
+    - 'Best tabular results per dataset selection and noise level from all augmentations and regularizations.'
+    - 'Computation time to train network for each augmentation technique.'
+keywords:
+  - 'deep learning'
+  - 'data augmentation'
+  - 'regularization'
+  - 'image denoising'
+date: '2025-04-25'
+status: 'COMPLETE.'
+pdfPath: '/documents/dataaugmentationdeeplearning.pdf'
+extraPdf: 'N/A'
+---
+
+<br />
+
+--------------------
+
+<br />
+
+## Summary:
+This project explores how training strategies affect pixel-level image restoration tasks. Specifically, we evaluate the effect of augmentation and regularization on convolutional neural network performance for Gaussian noise removal. Experiments are conducted on four datasets (MNIST, CIFAR-10, CIFAR-100, STL-10) with three noise levels (15%, 25%, 50%). Results are reported for augmentations and regularization techniques in isolation and in combination. We identify the best performing methods per noise level and analyze why certain techniques succeed or fail in the context of low-level denoising.
+
+## Problem:
+Low-level denoising tasks require precise pixel alignment between noisy and clean image pairs. Unlike classification, many popular augmentation methods such as flipping or cropping harm performance due to misalignment. Likewise, aggressive regularization can oversimplify network weights. Understanding how these strategies affect denoising performance remains underexplored. This project addresses that gap through empirical study.
+
+## Approach:
+We trained a baseline 7-layer encoder-decoder CNN using MSE loss. Experiments tested:
+- 11 augmentations (e.g., Cutout, Gaussian Noise, Flip, Crop)
+- 4 regularization methods (L1, L2, Dropout, Early Stopping)
+- 1 combined experiment with top-performing methods (Cutout + Gaussian + Early Stopping)
+Each experiment was run across 4 datasets and 3 noise levels. Metrics include RMSE and visual outputs.
+
+## Results:
+- **Cutout** and **Gaussian Noise** were top-performing augmentations across all noise levels.
+- **Flipping** and **Random Crop** consistently degraded performance.
+- **Early Stopping** was the best regularization technique.
+- Combined techniques improved results at high noise (50%), but showed minimal gains at lower noise.
+- The Base (no aug/reg) model performed strongly, suggesting over-regularization can be harmful.
+
+## Challenges:
+- Maintaining image-label alignment during augmentation.
+- Identifying appropriate hyperparameters per method.
+- Designing augmentations that improve generalization without compromising structure.
+
+## Future Work:
+Explore curriculum-style augmentation schedules (e.g., gradually increasing complexity), domain adaptation between noise types (Poisson, Salt-and-Pepper), and attention-based architectures for adaptive filtering.
+
+# Link:
+
+💻 **GitHub**: [https://github.com/alexneilgreen/Impact-of-Data-Aug-and-Reg-on-Image-Denoising-Performance-DNN](https://github.com/alexneilgreen/Impact-of-Data-Aug-and-Reg-on-Image-Denoising-Performance-DNN)
