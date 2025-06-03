@@ -32,20 +32,20 @@ const VerticalFeatures = ({ isDarkMode, allProjectsData }) => {
             <Break type="oneEighth" />
             <VerticalFeatureInformation
               isDarkMode={isDarkMode}
-              title1="I graduated as a Computer Engineer."
-              title2="Burnett's Honors College at University of Central Florida."
-              description="I completed a Bachelor's degree in Computer Engineering with a minor in Mathematics in May 2024. It all started with a passion of understanding the fundamentals of how computers operate in high school. Since then, I have worked with UI design, full stack web development, and video game creation."
-              image="/images/Burnett_Honors_College_UCF.png"
-              imageAlt="Burnett's Honors College at UCF Emblem"
+              title1="Who am I?"
+              title2="Recent Master's graduate in Computer Engineering at UCF."
+              description="I am a recent Master's graduate from the University of Central Florida (UCF), where I specialized in Intelligent Systems and Machine Learning. I previously earned my Bachelor's degree in Computer Engineering with a minor in Mathematics while enrolled in the Burnett's honors program at UCF. My focus throughout both degrees has been applying machine learning and software engineering to build tools that are useful, intuitive, and broadly accessible."
+              image="/images/UCF-Machine-Learning-Badge.png"
+              imageAlt="UCF Machine Learning Badge."
             />
             <Break type="oneEighth" />
             <VerticalFeatureInformation
               isDarkMode={isDarkMode}
-              title1="I am researching Machine Learning."
-              title2="Currently working towards completing a Master's Degree in Machine Learning."
-              description="I am continuing my journey at the University of Central Florida towards understanding complex Artificial Intelligence. I am a current student in a Master's degree in Intelligent Systems and Machine Learning. I intend to dive into research projects, which will be included in this website as progress ensues."
-              image="/images/UCF-Machine-Learning-Badge.png"
-              imageAlt="UCF Machine Learning Badge"
+              title1="What have I worked on?"
+              title2="Industry experience, academic research, and practical problem-solving."
+              description="I've had the opportunity to work across a range of teams and projects - from an internship at Microsoft, where I contributed to the software development work cycle for Power BI, to academic research in large language models, computer vision, and multi-modal alignment. I enjoy solving complex problems with clean, practical solutions, and I'm especially drawn to building tools that simplify workflows and make software more approachable."
+              image="/images/power_bi_logo.png"
+              imageAlt="Microsoft PowerBI Logo."
               right
             />
             <ButtonLink
@@ -74,6 +74,32 @@ const VerticalFeatures = ({ isDarkMode, allProjectsData }) => {
             </h3>
             <HorizontalLinkList
               isDarkMode={isDarkMode}
+              title="Machine Learning."
+              links={[
+                { title: 'PyTorch' },
+                { title: 'scikit-learn' },
+                { title: 'HuggingFace Transformers' },
+                { title: 'LLMs / PLMs' },
+                { title: 'GPT' },
+                { title: 'LLaMA' },
+                { title: 'YOLOv8' },
+                { title: 'OpenCV' },
+                { title: 'MediaPipe' },
+                { title: 'CNNs' },
+                { title: 'Preference Fine-Tuning' },
+                { title: 'Reinforcement Learning from Human Feedback' },
+                { title: 'Direct Preference Optimization' },
+                { title: 'Prompt Engineering' },
+                { title: 'Data Preprocessing' },
+                { title: 'Benchmarking' },
+                { title: 'Gaussian Noise Modeling' },
+                { title: 'Data Augmentation' },
+                { title: 'Data Regularization' },
+              ]}
+            />
+            <Break type="oneEighth" />
+            <HorizontalLinkList
+              isDarkMode={isDarkMode}
               title="Frontend Development and Design."
               links={[
                 { title: 'JavaScript' },
@@ -91,9 +117,25 @@ const VerticalFeatures = ({ isDarkMode, allProjectsData }) => {
             <Break type="oneEighth" />
             <HorizontalLinkList
               isDarkMode={isDarkMode}
+              title="Backend Development."
+              links={[
+                { title: 'REST APIs' },
+                { title: 'Node.js' },
+                { title: 'SQL' },
+                { title: 'File Handling' },
+                { title: 'Data Parsing' },
+                { title: 'State Management' },
+                { title: 'Vercel' },
+                { title: 'GitHub Pages' },
+              ]}
+            />
+            <Break type="oneEighth" />
+            <HorizontalLinkList
+              isDarkMode={isDarkMode}
               title="Game Design."
               links={[
-                { title: 'Unreal Engine' },
+                { title: 'Unreal Engine 4' },
+                { title: 'Unreal Engine 5' },
                 { title: 'Unity' },
               ]}
             />
@@ -108,6 +150,9 @@ const VerticalFeatures = ({ isDarkMode, allProjectsData }) => {
                 { title: 'C' },
                 { title: 'C#' },
                 { title: 'Python' },
+                { title: 'R' },
+                { title: 'SQL' },
+                { title: 'Bash' },
               ]}
             />
             <Break type="oneEighth" />
@@ -120,18 +165,27 @@ const VerticalFeatures = ({ isDarkMode, allProjectsData }) => {
                 { title: 'C' },
                 { title: 'Assembly' },
                 { title: 'TI Microcontroller MSP430' },
+                { title: 'Operating Systems' },
+                { title: 'Linux' },
+                { title: 'Computer Architecture' },
+                { title: 'Signal Processing and Control Systems' },
+                { title: 'Discrete Mathematics' },
               ]}
             />
             <Break type="oneEighth" />
-
             <HorizontalLinkList
               isDarkMode={isDarkMode}
               title="Other Skills."
               links={[
-                { title: 'Mathematics' },
+                { title: 'Visual Studio Code' },
+                { title: 'Linear Algebra' },
                 { title: 'Statistics' },
                 { title: 'Data Analysis' },
                 { title: 'Development Operations' },
+                { title: 'Technical Documentation' },
+                { title: 'Technical Presentations' },
+                { title: 'Agile' },
+                { title: 'Scrum' },
                 { title: 'Problem Solving' },
                 { title: 'Logic' },
                 { title: 'Leadership' },
@@ -157,6 +211,21 @@ const VerticalFeatures = ({ isDarkMode, allProjectsData }) => {
             </h3>
             <VerticalFeatureWorkExperience
               isDarkMode={isDarkMode}
+              title="Software Engineer."
+              company="Microsoft"
+              date="August 2025 - Current."
+              location="Redmond, Washington."
+              link="https://www.microsoft.com/en-us/"
+              description={[
+                "Starting August 2025, I'll be returning to Microsoft full-time as a Software Engineer on the Power BI team. After a great experience as an intern, I was offered the opportunity to come back and take on a larger role within the team. I'll be contributing to Power BI's stability and reliability by helping resolve bugs and supporting the product's ongoing development.",
+                "I'm especially excited to transition from intern to full-time and dive deeper into the day-to-day workflow of a large-scale engineering team. Having already built context during my internship, I'm looking forward to growing my impact and continuing to work on tools that empower users through accessible, data-driven insights."
+              ]}
+              image="/images/microsoft_logo.png"
+              imageAlt="Microsoft Logo."
+            />
+            <Break type="oneEighth" />
+            <VerticalFeatureWorkExperience
+              isDarkMode={isDarkMode}
               title="Software Engineer Intern."
               company="Microsoft"
               date="May 2024 - August 2024."
@@ -174,8 +243,8 @@ const VerticalFeatures = ({ isDarkMode, allProjectsData }) => {
                 "Utilized related tools and best practices to enhance software functionality and user experience.",
                 "Participated in team meetings and code reviews to maintain quality and coherence within the project."
               ]}
-              image="/images/power_bi_logo.png"
-              imageAlt="Microsoft PowerBI Logo"
+              image="/images/microsoft_logo.png"
+              imageAlt="Microsoft Logo."
             />
             <Break type="oneEighth" />
             <VerticalFeatureWorkExperience

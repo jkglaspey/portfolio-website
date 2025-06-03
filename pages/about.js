@@ -24,8 +24,8 @@ export default function About() {
 
         <div className="mx-auto max-w-screen-xl">
           <img
-            src="/images/self-pictures/1.jpg"
-            alt="Photo of myself in front of the TOC National Championships banner (2023)."
+            src="/images/about/waterfall.jpg"
+            alt="Photo of myself in front of a waterfall."
             className="w-1/2 mx-auto rounded"
           />
         </div>
@@ -43,15 +43,15 @@ export default function About() {
                 Who am I?
               </h3>
               <div className={`mt-6 text-xl leading-9 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-              I am a college student enrolled in the Burnett's Honors College at the University of Central Florida. Computers have always intrigued me, and I am on a mission to not only demystify their inner workings, but innovate it. Currently, I'm pursuing a Bachelor's degree in <strong>Computer Engineering</strong> with a minor in <i>Mathematics.</i> In this pursuit, I've put my skills to practical use, applying statistical analysis to gain industry experience. On top of it all, I am diving into a Master's program for <strong>Intelligent Systems and Machine Learning.</strong>
+              I'm Joshua Glaspey, a recent graduate with a Master's degree in <strong>Computer Engineering</strong> from the University of Central Florida, where I specialized in <strong>Intelligent Systems and Machine Learning.</strong> I previously completed my Bachelor's in Computer Engineering, along with a minor in Mathematics through <i>UCF's honors program.</i> My academic journey has centered around building AI systems - whether through <i>deep learning</i> or <i>computer vision</i> - to solve real-world problems. I'm drawn to projects that blend creativity with technical depth, especially when they aim to make software more intuitive and impactful.
               </div>
             </div>
             <div className="w-full sm:w-1/3 relative">
               <div className="inset-0 flex items-center justify-center">
                 <img
-                  src="/images/about/professional-picture.png"
+                  src="/images/about/grad.png"
                   className="w-max h-auto max-w-full object-cover rounded-lg"
-                  alt="A professional mugshot of myself."
+                  alt="A professional photo of myself."
                 />
               </div>
             </div>
@@ -89,68 +89,75 @@ export default function About() {
                     </h3>
                     <div className={`mt-6 text-l pb-4 `}>
                          
-{[{
-  text: "\u2003\u2003\u2003\u2003From my earliest days, sports have woven themselves into the fabric of my identity. Kindergarten introduced me to soccer, but as the chapters of my elementary school years turned, my heart found a rhythm in baseball. Middle school ushered in my tenure as a track athlete, a path I treaded both in elementary and middle school. However, it was tennis that struck the deepest chord within me."
+{
+[{
+  text: "\u2003\u2003\u2003\u2003From a young age, sports have always been a big part of who I am. I started with soccer in kindergarten, but somewhere in elementary school, I found myself hooked on baseball. Then came track—first in elementary, then middle school. But the sport that truly stuck, the one that kept calling me back, was tennis."
 },
 {
   text: "\u2003"
 },
 {
-  text: "\u2003\u2003\u2003\u2003I come from a trio of siblings, two brothers who, much like me, felt the magnetic pull of tennis. It was a matter of time before I also began my journey with a racket – at the young age of eight. Unfortunately, I began under the shadow of my brothers, as my age and experience limited me to the lower performance group. Yet, an unwritten law of sibling rivalry whispered that I'd soon surpass my older brothers through the fierce crucible of competition."
+  text: "\u2003\u2003\u2003\u2003I'm the youngest of three brothers, and like me, they both picked up tennis early on. So naturally, I followed in their footsteps, starting when I was eight. At first, I was placed in the lower-level group because of my age and lack of experience. But with that familiar sibling rivalry kicking in, I made it my mission to catch up—and eventually outplay—them."
 },
 {
   text: "\u2003"
 },
 {
-  text: "\u2003\u2003\u2003\u2003And so, it unfolded. The tapestry of local tournaments, often hours away from home, bore testament to my determination. Through many, many competitions, I collected a shelf of trophies, which stood as my proof of improvement. Yet, as years flew by, my practice partners dwindled, and the resonance of my passion waned."
+  text: "\u2003\u2003\u2003\u2003That drive led me through countless local tournaments, many of them hours away. Over time, I filled a shelf with trophies—physical proof that I was getting better. But as the years went on, my regular hitting partners moved on, and it became harder to keep the same passion alive."
 },
 {
   text: "\u2003"
 },
 {
-  text: "\u2003\u2003\u2003\u2003Despite the waning enthusiasm, a new chapter beckoned. High school introduced the arena of team matches, where my brother and I rode the charge of leadership. Unexpectedly, in my first try, we pulled off a hat trick of upsets, propelling us into the state championships. It was a locally recognized honor that reignited my dedication to the sport. Although we were beaten in the opening round, the fire within me was rekindled."
+  text: "\u2003\u2003\u2003\u2003Even so, high school brought a new energy. Playing on a team with my brother was something special. During my first year, we shocked everyone with a string of upsets and made it all the way to the state championships. We lost early, but that run reminded me how much I still cared about the game."
 },
 {
   text: "\u2003"
 },
 {
-  text: "\u2003\u2003\u2003\u2003As time elapsed, my siblings embarked on their college journeys, leaving me alone on the court. I wished to continue my improvements, but the lack of training partners led to a bold decision. With support from my parents, I committed to a new schedule at a more prestigious tennis facility. The dividends were apparent – heightened endurance and intensified training sessions painted a portrait of progress. However, sacrifices were inevitable, as I gave up personal time for school clubs and casual teenage shenanigans."
+  text: "\u2003\u2003\u2003\u2003After my brothers left for college, I found myself training alone more and more. Wanting to keep improving, I made a big decision—with my parents’ support, I moved to a more competitive tennis facility. Training got tougher, my fitness ramped up, and I was clearly getting stronger. But it came with sacrifices: I gave up time with friends, clubs, and just being a regular high school kid."
 },
 {
   text: "\u2003"
 },
 {
-  text: "\u2003\u2003\u2003\u2003My pursuit drove an idea into my head: to take my talent to my career and compete as a professional. While college recruiters never gave notice to my skills, the high school state competition presented me with a glimmer of hope. Through this final chapter, I held the ambition of making noise loud enough to be heard by these recruiters."
+  text: "\u2003\u2003\u2003\u2003That commitment made me think about taking tennis even further—maybe even professionally. College recruiters weren’t exactly lining up, but when I made it to the state tournament, I thought I had a shot at getting noticed. I kept that hope alive right through the final matches of my high school career."
 },
 {
   text: "\u2003"
 },
 {
-  text: "\u2003\u2003\u2003\u2003However, destiny interjected in the form of the Covid-19 pandemic. The world abruptly spun into isolation, and my dreams were deferred. This led to several months of desolation, unhealthy weight loss, and lethargy."
+  text: "\u2003\u2003\u2003\u2003But then COVID hit, and everything changed. Tournaments shut down, practices stopped, and the momentum I had built just evaporated. I was stuck at home, losing weight and motivation, not sure what came next."
 },
 {
   text: "\u2003"
 },
 {
-  text: "\u2003\u2003\u2003\u2003But from the ashes of adversity, my resilience emerged. I saw a new vision at the University of Central Florida, where I could chase after a new passion for technology. I had spent years traveling statewide for competitions, so I found a love in using video games to pass the time. So, after strong self-reflection, I found a part of me that wanted to follow a similar path. At first, I was captivated by Virtual Reality, yet the journey steered left towards the realms of Artificial Intelligence. Nevertheless, my personal belief lingered – to become the best version of myself as a tennis player."
+  text: "\u2003\u2003\u2003\u2003Eventually, I found a new direction. I enrolled at the University of Central Florida with a focus on technology—something I had grown to love through years of gaming and tinkering during tennis trips. At first, I leaned into Virtual Reality, but my path shifted toward Artificial Intelligence. Still, through it all, I kept telling myself that no matter what, I wasn’t done with tennis."
 },
 {
   text: "\u2003"
 },
 {
-  text: "\u2003\u2003\u2003\u2003College welcomed me with open arms. Engaging with the university's club tennis team provided a blend of competition and camaraderie. These teams, a haven for academically focused athletes, resonated with my aspirations. Once again, I could take the thrill of match play throughout the state of Florida. This beckoned me to a role in leadership, and I seized it along with a first-aid certification. Junior year saw me on the premier team, triumphing in state competitions that paved the way to nationals. There, amid fierce battles, we secured a commendable 12th rank, a testament to both mine and my team’s collective effort. Truly, this acted as a personal redemption."
+  text: "\u2003\u2003\u2003\u2003UCF gave me a second chance at competitive tennis. I joined the club team and quickly found my place among other students who took both school and tennis seriously. We traveled all across Florida competing, and over time, I stepped into a leadership role. Junior year, I made the top roster, and we pushed all the way to nationals—finishing 12th in the country. It was a huge redemption arc for me, and a reminder of how far I’d come."
 },
 {
   text: "\u2003"
 },
 {
-  text: "\u2003\u2003\u2003\u2003In the tapestry of my life, tennis stands as both muse and mentor. Its lessons have shaped my character – leadership, tenacity, and humility. I credit my parents for embodying unwavering compassion and giving me my values of respect and compassion. But I also credit myself, for without the journey I've undertaken, I wouldn't possess the strength of character I have today."
+  text: "\u2003\u2003\u2003\u2003In the big picture, tennis has shaped who I am. It taught me how to lead, how to handle setbacks, and how to stay grounded. I’m so thankful to my parents for supporting me, and for showing me what it means to treat people with kindness. But I also give credit to myself—for sticking with it through every low point and for turning those moments into fuel."
 },
 {
   text: "\u2003"
 },
 {
-  text: "\u2003\u2003\u2003\u2003Life's journey isn't linear; it's a dance with adversity. Just as an opponent's curveball or a fierce kick serve can catch one off guard, life's trials can stagger even the most determined. Yet, I've discovered the power to rebound, to harness motivation from the unlikeliest sources."
+  text: "\u2003\u2003\u2003\u2003The road hasn't always been smooth. Tennis—like life—throws curveballs. Sometimes you're on the wrong side of the scoreboard. But I’ve learned how to bounce back, stay motivated, and keep going, no matter what."
+},
+{
+  text: "\u2003"
+},
+{
+  text: "\u2003\u2003\u2003\u2003We made it to nationals three times—each one unforgettable. Our second appearance, in Surprise, Arizona, felt like a personal redemption arc. After everything I’d gone through, finishing 12th in the country was proof to myself that I still had it. Then came our third nationals in Rome, Georgia. We placed 18th this time, and I played the deciding match—it all came down to one match point, and I couldn’t close it out. That loss hit hard. But it also taught me more than any win could. I learned how to lead through pressure, how to carry a team when it counts, and how to walk off the court proud of the fight I gave."
 }].map((paragraph, index) => (
     <p key={index}>{paragraph.text}</p>
 ))}
@@ -181,15 +188,15 @@ export default function About() {
                 Where do my interests lie?
               </h3>
               <div className={`mt-6 text-xl leading-9 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-              I'm deeply passionate about <strong>machine learning,</strong> particularly its potential to boost productivity by replicating human-like thinking for practical tasks. I'm also captivated by modern machine learning techniques like expert systems, evolutionary computation, and reinforcement learning. My appreciation extends to <strong>mathematics and data analysis.</strong> Moreover, I'm intrigued by advancements in <i>Mixed Reality</i> technology, especially how <strong>Augmented Reality</strong> can break language barriers and assist in real-world navigation. Lastly, I've actively pursued my love for tennis for over a decade.
+              I'm interested in building <strong>artificially intelligent systems</strong> that make interacting with technology easier, more efficient, and more human. I've worked on projects that <i>align audio with text</i> using large language models, <i>detect sarcasm</i> through contradictory patterns, analyze patterns and motion in real-time using <i>computer vision</i>, among many others. Whether its automating workflows, or designing models that accept human language or computer vision as input, I'm drawn to the intersection of AI, usability, and thoughtful software design.
               </div>
             </div>
             <div className="w-full sm:w-1/3 relative">
               <div className="inset-0 flex items-center justify-center">
                 <img
-                  src="/images/about/inspiration-picture.jpg"
+                  src="/images/about/intern.png"
                   className="w-max h-auto max-w-full object-cover rounded-lg"
-                  alt="A shot of myself giving strategy for a tennis point."
+                  alt="A picture of myself holding up a #intern banner."
                 />
               </div>
             </div>
@@ -210,9 +217,9 @@ export default function About() {
             <div className="w-full sm:w-1/3 relative">
               <div className="inset-0 flex items-center justify-center">
                 <img
-                  src="/images/about/flag-picture.jpg"
+                  src="/images/about/inspiration-picture.jpg"
                   className="w-max h-auto max-w-full object-cover rounded-lg"
-                  alt="A picture of myself holding up a UCF flag."
+                  alt="A shot of myself giving strategy for a tennis point."
                 />
               </div>
             </div>

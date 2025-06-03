@@ -9,7 +9,7 @@ type IVerticalFeatureWorkExperienceProps = {
   location: string;
   link: string;
   description: string[];
-  responsibilities: string[];
+  responsibilities?: string[];
   image: string;
   imageAlt: string;
   hideResponsibilitiesHeader?: boolean;
@@ -59,23 +59,27 @@ const VerticalFeatureWorkExperience = (props: IVerticalFeatureWorkExperienceProp
           </div>
         ))}
       </div>
-      {!props.hideResponsibilitiesHeader && (
-        <div className="w-full mt-6 text-2xl font-semibold text-center">
-          Responsibilities:
-        </div>
-      )}
-      <div className="w-full mt-6 text-xl">
-        <ul className="list-disc list-inside">
-          {props.responsibilities.map((resp, index) => (
-            <li
-              key={index}
-              className={`py-1 ${ props.isDarkMode ? "hover:bg-gray-800" : "hover:bg-gray-200"}`}
-            >
-              {resp}
-            </li>
-          ))}
-        </ul>
+      {props.responsibilities && props.responsibilities.length > 0 && (
+  <>
+    {!props.hideResponsibilitiesHeader && (
+      <div className="w-full mt-6 text-2xl font-semibold text-center">
+        Responsibilities:
       </div>
+        )}
+        <div className="w-full mt-6 text-xl">
+          <ul className="list-disc list-inside">
+            {props.responsibilities.map((resp, index) => (
+              <li
+                key={index}
+                className={`py-1 ${ props.isDarkMode ? "hover:bg-gray-800" : "hover:bg-gray-200"}`}
+              >
+                {resp}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </>
+    )}
     </div>
   );
 };
